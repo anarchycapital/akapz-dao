@@ -11,7 +11,7 @@ import "../../node_modules/@openzeppelin/contracts/utils/Context.sol";
 import "../../node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
 
-contract Akapz is UUPSUpgradeable, Context, AccessControlEnumerable, ERC20Votes {
+contract Akapz is Context, AccessControlEnumerable, ERC20Votes {
 
 using Address for address;
 
@@ -26,13 +26,11 @@ bytes32 private constant OWNER_ROLE = keccak256(abi.encode("OWNER_ROLE"));
 bytes32 private constant FOUNDER_ROLE = keccak256(abi.encode("FOUNDER_ROLE"));
 
 constructor(string memory name, string memory symbol, address owner_) ERC20(name, symbol) ERC20Permit("Akapz") {
-    if(_initialized == 0) {
+
         _setOwner(owner_);
         _setupRole(UPGRADER_ROLE, owner_);
         _mint(_msgSender(), s_maxSupply);
-    } else {
-    revert("already initialized");
-    }
+
 }
 
 
@@ -46,9 +44,7 @@ modifier onlyUpgrader(address sender) {
     _;
 }
 
-function _authorizeUpgrade(address newImplementation) internal override onlyUpgrader(_msgSender()) {
 
-}
 
 function _afterTokenTransfer(address from, address to, uint256 amount) internal override(ERC20Votes) {
     super._afterTokenTransfer(from, to, amount);

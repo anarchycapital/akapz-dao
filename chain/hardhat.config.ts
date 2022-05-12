@@ -4,27 +4,61 @@ import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
+import "hardhat-ethernal";
 import "hardhat-gas-reporter";
-import "solidity-coverage";
+
+import * as config1 from "./data/params";
+
+import EventEmitter from "events";
+import {ethernal, ethers} from "hardhat";
 
 dotenv.config();
+const emitter = new EventEmitter()
+emitter.setMaxListeners(100)
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
 
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
+
+task("deployme", "deploy hardhat", async (taskArgs, hre) =>  {
+
+
+
+  // @ts-ignore
+  const account = await hre.ethers.getSigners()
+  const deployer = account[0].address;
+
+  const Akapz = await hre.ethers.getContractFactory("Akapz");
+  const akapz = await Akapz.deploy(
+      config1.TestParams.Token.name, config1.TestParams.Token.symbol, deployer
+  );
+  const name = await akapz.name();
+
+  await akapz.delegate(deployer)
+
+  await hre.ethernal.push({name:name, address: akapz.address})
+
+
+
+
+
+
+
+    console.log(`Delegating to ${deployer}`)
+
+    console.log("Delegated!")
+
+})
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
+// @ts-ignore
 
+// @ts-ignore
 const config: HardhatUserConfig = {
   solidity: "0.8.9",
+  defaultNetwork: "hardhat",
   networks: {
+      hardhat: {
+      },
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
       accounts:
@@ -38,6 +72,13 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
+  // @ts-ignore
+  ethernal: {
+    email: process.env.ETHERNAL_EMAIL,
+    password: process.env.ETHERNAL_PASSWORD,
+    uploadAst: true, // If set to true, plugin will upload AST, and you'll be able to use the storage feature (longer sync time though)
+
+  }
 
 };
 
