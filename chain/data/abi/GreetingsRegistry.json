@@ -1,0 +1,7 @@
+[
+  "constructor(string)",
+  "event MessageChanged(address indexed,string)",
+  "function messages(address) view returns (string)",
+  "function postUpgrade(string)",
+  "function setMessage(string)"
+]

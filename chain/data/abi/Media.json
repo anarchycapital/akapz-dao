@@ -1,0 +1,3 @@
+[
+  "function newImage(tuple(string,uint256,uint256,uint256,bool,bool,string,string,uint256,uint256)) pure returns (tuple(string,uint256,uint256,uint256,bool,bool,string,string,uint256,uint256))"
+]

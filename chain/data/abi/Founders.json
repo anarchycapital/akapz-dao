@@ -1,0 +1,3 @@
+[
+  "function _createFounder(string,bytes32,address) pure returns (tuple(string,bytes32,address))"
+]

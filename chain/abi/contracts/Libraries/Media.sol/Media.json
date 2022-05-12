@@ -1,0 +1,125 @@
+[
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "mimeType",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "size",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "heightPx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "widthPx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "_censoredIfNotPurchased",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "_isNSFW",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_description",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_timestamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_expiry",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Media.ImageDetails",
+        "name": "_image",
+        "type": "tuple"
+      }
+    ],
+    "name": "newImage",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "mimeType",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "size",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "heightPx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "widthPx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "_censoredIfNotPurchased",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "_isNSFW",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_description",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_timestamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_expiry",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Media.ImageDetails",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
+]
