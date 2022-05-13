@@ -1,14 +1,14 @@
-//SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.9;
+//SPDX-License-Identifier: MIT
+pragma solidity 0.8.9;
 
 
-import "../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "../../node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
-import "../../node_modules/@openzeppelin/contracts/proxy/utils/Initializable.sol";
-import "../../node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
-import "../../node_modules/@openzeppelin/contracts/utils/Address.sol";
-import "../../node_modules/@openzeppelin/contracts/utils/Context.sol";
-import "../../node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
+import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
+import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
 
 contract Akapz is Context, AccessControlEnumerable, ERC20Votes {
@@ -25,7 +25,7 @@ bytes32 private constant UPGRADER_ROLE = keccak256(abi.encode("UPGRADER_ROLE"));
 bytes32 private constant OWNER_ROLE = keccak256(abi.encode("OWNER_ROLE"));
 bytes32 private constant FOUNDER_ROLE = keccak256(abi.encode("FOUNDER_ROLE"));
 
-constructor(string memory name, string memory symbol, address owner_) ERC20(name, symbol) ERC20Permit("Akapz") {
+constructor(string memory name, string memory symbol, address owner_) ERC20(name, symbol) ERC20Permit(name) {
 
         _setOwner(owner_);
         _setupRole(UPGRADER_ROLE, owner_);

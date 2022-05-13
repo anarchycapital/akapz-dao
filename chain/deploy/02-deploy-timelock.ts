@@ -1,31 +1,36 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types"
-import { DeployFunction } from "hardhat-deploy/types"
 import {MIN_DELAY} from "../data/params";
+import * as hre from "hardhat";
+import * as config from "../data/params";
 
-const deployTimeLock: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const main = async function()  {
     // @ts-ignore
-    const { getNamedAccounts, deployments, network } = hre
-    const { deploy, log } = deployments
+
     // @ts-ignore
     const accounts = await hre.ethers.getSigners()
     const deployer = accounts[0].address;
-    log("----------------------------------------------------")
-    log("Deploying TimeLock and waiting for confirmations...")
-    const timeLock = await deploy("TimeLock", {
-        from: deployer,
-        args: [MIN_DELAY, [], []],
-        log: true,
-        // we need to wait if on a live network so we can verify properly
-        waitConfirmations:  1,
+    console.log("----------------------------------------------------")
+    console.log("Deploying TimeLock and waiting for confirmations...")
+    const TimeLock = await hre.ethers.getContractFactory("TimeLock");
+    const timelock = await TimeLock.deploy(MIN_DELAY, [], []);
+    await timelock.deployed();
+
+    await timelock.deployTransaction.wait(5);
+
+    await hre.run("verify:verify", {
+        address: timelock.address,
+        constructorArguments: [
+            MIN_DELAY, [], []
+        ],
+        contract: "contracts/Base/Timelock.sol:TimeLock"
     });
-    // @ts-ignore
-    await hre.ethernal.push({
-        name: 'TimeLock',
-        address: timeLock.address
-    });
-    log(`TimeLock at ${timeLock.address}`)
+
+
+    console.log(`TimeLock at ${timelock.address}`)
 
 }
 
-export default deployTimeLock
-deployTimeLock.tags = ["all", "timelock"]
+main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+});

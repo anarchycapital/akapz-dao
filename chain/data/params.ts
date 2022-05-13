@@ -28,6 +28,9 @@ export const VOTING_PERIOD = 5 // blocks
 export const VOTING_DELAY = 1 // 1 Block - How many blocks till a proposal vote becomes active
 export const ADDRESS_ZERO = "0x0000000000000000000000000000000000000000"
 
-export const NEW_STORE_VALUE = 77
 export const FUNC = "store"
-export const PROPOSAL_DESCRIPTION = "Proposal #1 77 in the Box!"
+
+
+export const DEV_AKAPZ_TOKEN = "0xd7122313d6906afE2E6E4Dda53898EcAa5A76338";
+export const DEV_TIMELOCK = "0x022858EA74e59Fbb4E332A731f8cef55Df2eb7fb";
+export const DEV_GOVERNOR = "0xD8d967256f91b7290AF2d9001D1D574f0Af99818";

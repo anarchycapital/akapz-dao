@@ -4,13 +4,13 @@ import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
-import "hardhat-ethernal";
+
 import "hardhat-gas-reporter";
 
 import * as config1 from "./data/params";
 
 import EventEmitter from "events";
-import {ethernal, ethers} from "hardhat";
+import {ethers} from "hardhat";
 
 dotenv.config();
 const emitter = new EventEmitter()
@@ -34,12 +34,6 @@ task("deployme", "deploy hardhat", async (taskArgs, hre) =>  {
 
   await akapz.delegate(deployer)
 
-  await hre.ethernal.push({name:name, address: akapz.address})
-
-
-
-
-
 
 
     console.log(`Delegating to ${deployer}`)
@@ -53,12 +47,30 @@ task("deployme", "deploy hardhat", async (taskArgs, hre) =>  {
 // @ts-ignore
 
 // @ts-ignore
+
 const config: HardhatUserConfig = {
-  solidity: "0.8.9",
   defaultNetwork: "hardhat",
+  solidity: {
+    version: "0.8.9",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
   networks: {
       hardhat: {
       },
+    mumbai: {
+      url: process.env.POLYGON_URL,
+      // @ts-ignore
+      accounts: [process.env.PRIVATE_KEY],
+      timeout: 200000,
+      gasPrice: "auto",
+      from: "0xc956BbcA545e0071Edcd14AE0531F7fa94D33771",
+      gas: "auto",
+    },
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
       accounts:
@@ -72,13 +84,7 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
-  // @ts-ignore
-  ethernal: {
-    email: process.env.ETHERNAL_EMAIL,
-    password: process.env.ETHERNAL_PASSWORD,
-    uploadAst: true, // If set to true, plugin will upload AST, and you'll be able to use the storage feature (longer sync time though)
 
-  }
 
 };
 
