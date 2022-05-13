@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "../Libraries/Media.sol";
 
-abstract contract ERC721MetadataPayable is ERC721, ERC721URIStorage {
+abstract contract ERC721MetadataPayable is Ownable {
 
     struct Metadata {
         address creator;
