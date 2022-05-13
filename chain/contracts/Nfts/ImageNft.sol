@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "../Base/BaseMediaNFT.sol";
+
 import "../Libraries/Media.sol";
 
-contract ImageNFT is BaseMediaNft {
+contract ImageNFT {
 
     Media.ImageDetails private _image;
 

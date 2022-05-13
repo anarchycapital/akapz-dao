@@ -7,10 +7,13 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "../Libraries/Media.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-abstract contract ERC721MediaPayable is ERC721, ERC721URIStorage, Ownable {
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
 
 
     address private _beneficiary;
+
+    using SafeERC20 for ERC20;
 
     event NFTBought(address indexed _nftToken, address indexed _from, address indexed _to, uint256 amount, address currency);
     event NFTViewed(address indexed _nftToken, uint timestamp, bool _freeView);
@@ -19,21 +22,20 @@ abstract contract ERC721MediaPayable is ERC721, ERC721URIStorage, Ownable {
     uint private _freeViews = 0;
     uint private _boughtNumTimes = 0;
 
+    address private _creator;
+    address private _owner;
 
-    struct Metadata {
-        address creator;
-        string ipfsBase;
-        string previewImage;
-        string previewVideo;
-        bytes32 mediaType;
-    }
+    bytes32 private _mediaType;
+
+    string previewURI;
+
 
     struct BoughtItem {
         address _internalID;
         string ipfsHash;
         uint256 amount;
         uint timestamp;
-        Metadata _itemMetas;
+        uint tokenId;
     }
 
     uint256 private price;
@@ -48,21 +50,36 @@ abstract contract ERC721MediaPayable is ERC721, ERC721URIStorage, Ownable {
         return "ipfs://";
     }
 
-    mapping (address => Metadata) private _metadataPayable;
     mapping (address => bool) private _buyer;
-    mapping (address => ERC20) private _acceptedERC20Tokens;
+    mapping (uint => ERC20) private _acceptedERC20Tokens;
 
 
-    function Creator(address _nft) public view virtual returns (address) {
-        return _getMetaDataPayable(_nft).creator;
+    function setAcceptedCurrencies(address[] memory tokens) public onlyOwner {
+        uint i = 0;
+        for (i == 0; i < tokens.length; i++) {
+            _acceptedERC20Tokens[i] = ERC20(tokens[i]);
+        }
     }
 
-    function PreviewImage(address _nft) public view virtual returns (string) {
-        return _getMetaDataPayable(_nft).previewImage;
+    function getAcceptedCurrencies() public view virtual returns(string[] memory) {
+        uint i = 0;
+        string _allCurrencies = "";
+        for (i == 0; i < _acceptedERC20Tokens.length; i++) {
+            _allCurrencies += _acceptedERC20Tokens[i].name() + "("+_acceptedERC20Tokens[i].symbol()+")\n";
+        }
+        return _allCurrencies;
+    }
+
+    function Creator() public view virtual returns (address) {
+        return _creator;
+    }
+
+    function PreviewImage() public view virtual returns (string) {
+        return previewURI;
     }
 
     function MediaType(address _nft) public view virtual returns (string) {
-        return _getMetaDataPayable(_nft).mediaType;
+        return _mediaType;
     }
 
     function IsImageMediaType(address _nft) public view virtual returns(bool) {
@@ -83,13 +100,6 @@ abstract contract ERC721MediaPayable is ERC721, ERC721URIStorage, Ownable {
         return _metadataPayable[_nft].previewVideo;
     }
 
-    function _getMetaDataPayable(address _nft) private returns (Metadata) {
-        return _metadataPayable[_nft];
-    }
-
-    function setMetadata(address _nft, Metadata _data) public onlyOwner {
-        _metadataPayable[_nft] = _data;
-    }
 
     function _beforeCreate() private {}
     function _afterCreate() private {}
