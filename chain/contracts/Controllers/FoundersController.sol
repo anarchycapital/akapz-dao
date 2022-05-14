@@ -26,13 +26,13 @@ contract FoundersController is Ownable, ACLController {
     }
 
     function ChangePercentFundsPerDirector(uint256 newValue) public onlyOwner {
-        oldValue = DedicatedPercentForDirector;
+        uint256 oldValue = DedicatedPercentForDirector;
             DedicatedPercentForDirector = newValue;
         emit PercentFundsPerDirectorChanged(oldValue, newValue);
     }
 
 
-    function _addNewDirector(address memory _founderAddress, uint256 _dedicatedAmount, Founders.founderData __data) private onlyOwner {
+    function _addNewDirector(address  _founderAddress, uint256 _dedicatedAmount, Founders.founderData memory __data) private onlyOwner {
         _foundersDirectory[_founderAddress] = __data;
 
     }
@@ -41,10 +41,10 @@ contract FoundersController is Ownable, ACLController {
         _data = Founders._createFounder(name, roles, wallet);
     }
 
-    function _resetData() private pure onlyOwner {
-        __data.name = "";
-        __data.roles = NOTSET_ROLE;
-        __data.wallet = "0x0000000000000000000000000000000000000000";
+    function _resetData() private onlyOwner {
+        _data.name = "";
+        _data.roles = NOTSET_ROLE;
+        _data.wallet = address(0x0000000000000000000000000000000000000000);
     }
 
 }

@@ -29,6 +29,8 @@ abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
 
     string previewURI;
 
+    bytes32[] _allCurrencies;
+
 
     struct BoughtItem {
         address _internalID;
@@ -51,7 +53,7 @@ abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
     }
 
     mapping (address => bool) private _buyer;
-    mapping (uint => ERC20) private _acceptedERC20Tokens;
+    ERC20[] private _acceptedERC20Tokens;
 
 
     function setAcceptedCurrencies(address[] memory tokens) public onlyOwner {
@@ -61,11 +63,11 @@ abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
         }
     }
 
-    function getAcceptedCurrencies() public view virtual returns(string[] memory) {
+    function getAcceptedCurrencies() public returns(bytes32[] memory) {
         uint i = 0;
-        string _allCurrencies = "";
+
         for (i == 0; i < _acceptedERC20Tokens.length; i++) {
-            _allCurrencies += _acceptedERC20Tokens[i].name() + "("+_acceptedERC20Tokens[i].symbol()+")\n";
+            _allCurrencies[i] = keccak256(abi.encode(_acceptedERC20Tokens[i].name()));
         }
         return _allCurrencies;
     }
@@ -74,30 +76,30 @@ abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
         return _creator;
     }
 
-    function PreviewImage() public view virtual returns (string) {
+    function PreviewImage() public view virtual returns (string memory) {
         return previewURI;
     }
 
-    function MediaType(address _nft) public view virtual returns (string) {
+    function MediaType() public view virtual returns (bytes32) {
         return _mediaType;
     }
 
-    function IsImageMediaType(address _nft) public view virtual returns(bool) {
-        return _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_IMAGE || _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_FREEBIE_IMAGE;
+    function IsImageMediaType() public view virtual returns(bool) {
+        return _mediaType == Media.MEDIA_TYPE_IMAGE || _mediaType == Media.MEDIA_TYPE_FREEBIE_IMAGE;
     }
 
-    function IsVideoMediaType(address _nft) public view virtual returns(bool) {
-        return _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_VIDEO|| _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_FREEBIE_VIDEO;
+    function IsVideoMediaType() public view virtual returns(bool) {
+        return _mediaType == Media.MEDIA_TYPE_VIDEO|| _mediaType == Media.MEDIA_TYPE_FREEBIE_VIDEO;
     }
 
-    function IsStreamMediaType(address _nft) public view virtual returns(bool) {
-        return _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_FREEBIE_STREAM || _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_PPMS ||
-        _getMetaDataPayable(_nft).mediaType == Media.MEDIA_TYPE_PPVS;
+    function IsStreamMediaType() public view virtual returns(bool) {
+        return _mediaType == Media.MEDIA_TYPE_FREEBIE_STREAM || _mediaType == Media.MEDIA_TYPE_PPMS ||
+        _mediaType == Media.MEDIA_TYPE_PPVS;
     }
 
 
-    function PreviewVideo(address _nft) public view virtual returns (string) {
-        return _metadataPayable[_nft].previewVideo;
+    function PreviewVideo() public view virtual returns (string memory) {
+        return previewURI;
     }
 
 
@@ -109,14 +111,14 @@ abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
 
 
     modifier onlyBuyer(uint _itemId, address _sender) {
-        require(_buyers[_sender] == true, "please purchase this nft before doing this");
+        require(_buyer[_sender] == true, "please purchase this nft before doing this");
         _;
     }
 
 
     function safeMint(address to, string memory _uri) public onlyOwner {
-        uint256 tokenId = _tokenIds.current();
-        _tokenIds.increment();
+        uint256 tokenId = _currentIds.current();
+        _currentIds.increment();
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, _uri);
     }
@@ -139,10 +141,10 @@ abstract contract ERC721MultiMediaPayable is ERC721, ERC721URIStorage, Ownable {
     @dev _buyAMint is when a token is buyable by customers to keep indefinitely for themselves for a ONE TIME FEE
     */
     function _buyAMint(address to, string memory metadataURI) public virtual payable returns (uint256) {
-        require(msg.value >= _price, "not enough value sent");
-        uint256 newItemId = _tokenIds.current();
-        _tokenIds.increment();
-        _existingURIs[metadataURI] = 1;
+        require(msg.value >= price, "not enough value sent");
+        uint256 newItemId = _currentIds.current();
+        _currentIds.increment();
+      //  _existingURIs[metadataURI] = 1;
         _mint(to, newItemId);
         _setTokenURI(newItemId, metadataURI);
         return newItemId;

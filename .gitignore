@@ -1,0 +1,11 @@
+
+localchain/test-chain-1/consensus/validator.key
+chain/scripts/propose.ts
+akapz-dao.iml
+localchain/test-chain-1/libp2p/libp2p.key
+localchain/test-chain-2/consensus/validator.key
+localchain/test-chain-2/libp2p/libp2p.key
+localchain/test-chain-3/consensus/validator.key
+localchain/test-chain-3/libp2p/libp2p.key
+localchain/test-chain-4/consensus/validator.key
+localchain/test-chain-4/libp2p/libp2p.key

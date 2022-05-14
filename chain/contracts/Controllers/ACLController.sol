@@ -67,11 +67,11 @@ abstract contract ACLController is Ownable, AccessControlEnumerable {
 
     }
 
-    function getAllDirectorRoles() public pure view returns(bytes32 memory) {
+    function getAllDirectorRoles() public view returns(bytes32[] memory) {
         return DirectorRoles;
     }
 
-    function getAllDirectorRolesAsHumanReadable() public pure view returns(string[] memory) {
+    function getAllDirectorRolesAsHumanReadable() public view returns(string[] memory) {
        return _rolesStr;
     }
 
@@ -93,7 +93,7 @@ abstract contract ACLController is Ownable, AccessControlEnumerable {
         _aclOwner = __aclOwner;
     }
 
-    function AclOwner() public pure view virtual returns(address) {
+    function AclOwner() public view  returns(address) {
         return _aclOwner;
     }
 

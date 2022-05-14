@@ -19,10 +19,7 @@ const main = async function (args: any[], functionToCall: string, proposalDescri
         [encodedFunctionCall],
         proposalDescription
     )
-    // If working on a development chain, we will push forward till we get to the voting period.
-    if (developmentChains.includes(network.name)) {
-        await moveBlocks(VOTING_DELAY + 1)
-    }
+
     const proposeReceipt = await proposeTx.wait(1)
     const proposalId = proposeReceipt.events[0].args.proposalId
     console.log(`Proposed with proposal ID:\n  ${proposalId}`)
