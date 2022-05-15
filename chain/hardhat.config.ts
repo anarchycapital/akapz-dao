@@ -18,29 +18,7 @@ emitter.setMaxListeners(100)
 
 
 
-task("deployme", "deploy hardhat", async (taskArgs, hre) =>  {
 
-
-
-  // @ts-ignore
-  const account = await hre.ethers.getSigners()
-  const deployer = account[0].address;
-
-  const Akapz = await hre.ethers.getContractFactory("Akapz");
-  const akapz = await Akapz.deploy(
-      config1.TestParams.Token.name, config1.TestParams.Token.symbol, deployer
-  );
-  const name = await akapz.name();
-
-  await akapz.delegate(deployer)
-
-
-
-    console.log(`Delegating to ${deployer}`)
-
-    console.log("Delegated!")
-
-})
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
