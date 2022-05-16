@@ -2,23 +2,19 @@
 pragma solidity 0.8.9;
 
 
-import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20VotesUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
-//import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
+import "@openzeppelin/contracts/utils/Address.sol";
+
+import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 import "./Fees.sol";
 
-import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
 
-contract Akapz is Initializable, UUPSUpgradeable, AccessControlEnumerableUpgradeable, ERC20VotesUpgradeable, Fees {
+contract Akapz is Initializable, AccessControlEnumerable, ERC20Votes {
 
-using AddressUpgradeable for address;
+using Address for address;
 
-    IUniswapV2Router02 public uniswapRouter;
-    address public constant UNISWAP_ROUTER_ADDRESS = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
+ 
 
 address private _owner;
 uint private _initialized = 0;
@@ -34,26 +30,19 @@ bytes32 private constant FOUNDER_ROLE = keccak256(abi.encode("FOUNDER_ROLE"));
 
     mapping(address => bool) public _holders;
 
-    constructor(string memory name, string memory symbol, address owner_) {
+    constructor(string memory name, string memory symbol, address owner_) ERC20(name, symbol) ERC20Permit(name)  {
         initialize(name, symbol, owner_);
     }
 
-function initialize(string memory name, string memory symbol, address owner_) public virtual initializer {
+function initialize(string memory name, string memory symbol, address owner_) public  {
 
-    uniswapRouter = IUniswapV2Router02(UNISWAP_ROUTER_ADDRESS);
-        __AccessControlEnumerable_init();
-        __ERC20_init(name, symbol);
-        __ERC20Permit_init(name);
-        __Fees_Init();
+
 
         __Akapz_init(owner_);
-        __UUPSUpgradeable_init();
+        
 
 }
 
-
-
-    function _authorizeUpgrade(address newImplementation) internal virtual onlyUpgrader(msg.sender) override {}
 
 function __Akapz_init(address owner_) private {
     _setOwner(owner_);
@@ -76,7 +65,7 @@ modifier onlyUpgrader(address sender) {
 
 
 
-function _afterTokenTransfer(address from, address to, uint256 amount) internal override(ERC20VotesUpgradeable) {
+function _afterTokenTransfer(address from, address to, uint256 amount) internal override(ERC20Votes) {
     if(amount >= 1) {
         _holders[to] = true;
     }
@@ -88,10 +77,10 @@ function mint(address to, uint256 amount) public onlyUpgrader(msg.sender) {
     _mint(to, amount);
 }
 
-function _mint(address to, uint256 amount) internal override(ERC20VotesUpgradeable) {
+function _mint(address to, uint256 amount) internal override(ERC20Votes) {
     super._mint(to, amount);
   }
-function _burn(address account, uint256 amount) internal override(ERC20VotesUpgradeable) {
+function _burn(address account, uint256 amount) internal override(ERC20Votes) {
     super._burn(account, amount);
   }
 

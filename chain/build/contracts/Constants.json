@@ -1,0 +1,291 @@
+{
+  "contractName": "Constants",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Libraries/Constants.sol\":\"Constants\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Libraries/Constants.sol\":{\"keccak256\":\"0x65170618537177a3032a5cf0bd5fb62072bdc9df402b88d1586a8d96752ac850\",\"license\":\"AGPL-1.0\",\"urls\":[\"bzz-raw://63b90aa8fd13105329b9c869e3d4ec531b199e0d14dc67a11a4b1a661f451cb4\",\"dweb:/ipfs/QmWxzrtpshUFsUkueQDpcwM1qLDKW5TdrGjnFb6UCkQ5EM\"]}},\"version\":1}",
+  "bytecode": "0x60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220cc8fee25188810b2d1ea0230b44aae7eb744c947d26be3eaf84f703d4d99c50564736f6c63430008090033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220cc8fee25188810b2d1ea0230b44aae7eb744c947d26be3eaf84f703d4d99c50564736f6c63430008090033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "62:198:94:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "62:198:94:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: AGPL-1.0\n\npragma solidity 0.8.9;\n\nlibrary Constants {\n    uint256 internal constant UINT256_MAX = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;\n    uint256 internal constant DECIMALS_18 = 1000000000000000000;\n}\n",
+  "sourcePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Libraries/Constants.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Libraries/Constants.sol",
+    "exportedSymbols": {
+      "Constants": [
+        18891
+      ]
+    },
+    "id": 18892,
+    "license": "AGPL-1.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18884,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "38:22:94"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Constants",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 18891,
+        "linearizedBaseContracts": [
+          18891
+        ],
+        "name": "Constants",
+        "nameLocation": "70:9:94",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 18887,
+            "mutability": "constant",
+            "name": "UINT256_MAX",
+            "nameLocation": "112:11:94",
+            "nodeType": "VariableDeclaration",
+            "scope": 18891,
+            "src": "86:106:94",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 18885,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:7:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "307846464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646",
+              "id": 18886,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "126:66:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_115792089237316195423570985008687907853269984665640564039457584007913129639935_by_1",
+                "typeString": "int_const 1157...(70 digits omitted)...9935"
+              },
+              "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 18890,
+            "mutability": "constant",
+            "name": "DECIMALS_18",
+            "nameLocation": "224:11:94",
+            "nodeType": "VariableDeclaration",
+            "scope": 18891,
+            "src": "198:59:94",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 18888,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:7:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "31303030303030303030303030303030303030",
+              "id": 18889,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "238:19:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000"
+              },
+              "value": "1000000000000000000"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 18892,
+        "src": "62:198:94",
+        "usedErrors": []
+      }
+    ],
+    "src": "38:223:94"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Libraries/Constants.sol",
+    "exportedSymbols": {
+      "Constants": [
+        18891
+      ]
+    },
+    "id": 18892,
+    "license": "AGPL-1.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18884,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "38:22:94"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Constants",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 18891,
+        "linearizedBaseContracts": [
+          18891
+        ],
+        "name": "Constants",
+        "nameLocation": "70:9:94",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 18887,
+            "mutability": "constant",
+            "name": "UINT256_MAX",
+            "nameLocation": "112:11:94",
+            "nodeType": "VariableDeclaration",
+            "scope": 18891,
+            "src": "86:106:94",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 18885,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:7:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "307846464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646",
+              "id": 18886,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "126:66:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_115792089237316195423570985008687907853269984665640564039457584007913129639935_by_1",
+                "typeString": "int_const 1157...(70 digits omitted)...9935"
+              },
+              "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 18890,
+            "mutability": "constant",
+            "name": "DECIMALS_18",
+            "nameLocation": "224:11:94",
+            "nodeType": "VariableDeclaration",
+            "scope": 18891,
+            "src": "198:59:94",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 18888,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "198:7:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "31303030303030303030303030303030303030",
+              "id": 18889,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "238:19:94",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000"
+              },
+              "value": "1000000000000000000"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 18892,
+        "src": "62:198:94",
+        "usedErrors": []
+      }
+    ],
+    "src": "38:223:94"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-16T16:01:01.369Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

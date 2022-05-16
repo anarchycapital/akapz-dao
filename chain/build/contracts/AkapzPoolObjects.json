@@ -1,0 +1,1187 @@
+{
+  "contractName": "AkapzPoolObjects",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Pools/AkapzPoolObjects.sol\":\"AkapzPoolObjects\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"project:/contracts/Pools/AkapzPoolObjects.sol\":{\"keccak256\":\"0x97385d3b1b4a738260ed947fa01f50aa40a04fc2ec42bd10e2f944cb3eb1aea8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://194de4382465bcc4a01d170e0cde0d2d9faaba0121e240cc062f16f116bf1d0b\",\"dweb:/ipfs/Qmd5GBFSaHeX1DPxu62baVBKUP54Z4nyD9FnXTe7TJP4b6\"]},\"project:/v2-core/contracts/interfaces/IUniswapV2Pair.sol\":{\"keccak256\":\"0x7c9bc70e5996c763e02ff38905282bc24fb242b0ef2519a003b36824fc524a4b\",\"urls\":[\"bzz-raw://85d5ad2dd23ee127f40907a12865a1e8cb5828814f6f2480285e1827dd72dedf\",\"dweb:/ipfs/QmayKQWJgWmr46DqWseADyUanmqxh662hPNdAkdHRjiQQH\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212207e65180f0487a0aa0aeec633d757d1bf57062766a72cb4532f9157484801670564736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212207e65180f0487a0aa0aeec633d757d1bf57062766a72cb4532f9157484801670564736f6c63430008090033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "194:574:37:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "194:574:37:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\nimport { IERC20 } from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport \"../../v2-core/contracts/interfaces/IUniswapV2Pair.sol\";\n\ncontract AkapzPoolObjects {\n\n    struct Staker {\n        uint8[] stakeIds;\n        uint256 amount;\n        uint256 rewardDebt;\n        uint blockTs;\n    }\n\n    struct StakeData {\n        address staker;\n        IUniswapV2Pair lpToken;\n        uint256 stakedLPTokenAmount;\n        uint256 startBlock;\n        uint256 shareOfPool;\n        uint256 allocPoint;\n        uint256 lastRewardBlock;\n        uint256 accPerShare;\n    }\n\n    struct Pool {\n        IUniswapV2Pair lpToken;\n        uint256 allocPoint;\n        uint256 lastRewardBlock;\n        uint256 accPerShare;\n    }\n\n}",
+  "sourcePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Pools/AkapzPoolObjects.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Pools/AkapzPoolObjects.sol",
+    "exportedSymbols": {
+      "AkapzPoolObjects": [
+        6949
+      ],
+      "IERC20": [
+        2202
+      ],
+      "IUniswapV2Pair": [
+        8328
+      ]
+    },
+    "id": 6950,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6907,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:37"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 6909,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6950,
+        "sourceUnit": 2203,
+        "src": "56:72:37",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6908,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "65:6:37",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/v2-core/contracts/interfaces/IUniswapV2Pair.sol",
+        "file": "../../v2-core/contracts/interfaces/IUniswapV2Pair.sol",
+        "id": 6910,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6950,
+        "sourceUnit": 8329,
+        "src": "129:63:37",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AkapzPoolObjects",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 6949,
+        "linearizedBaseContracts": [
+          6949
+        ],
+        "name": "AkapzPoolObjects",
+        "nameLocation": "203:16:37",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "AkapzPoolObjects.Staker",
+            "id": 6920,
+            "members": [
+              {
+                "constant": false,
+                "id": 6913,
+                "mutability": "mutable",
+                "name": "stakeIds",
+                "nameLocation": "259:8:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "251:16:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 6911,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:5:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 6912,
+                  "nodeType": "ArrayTypeName",
+                  "src": "251:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6915,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "285:6:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "277:14:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6914,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6917,
+                "mutability": "mutable",
+                "name": "rewardDebt",
+                "nameLocation": "309:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "301:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6916,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6919,
+                "mutability": "mutable",
+                "name": "blockTs",
+                "nameLocation": "334:7:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "329:12:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6918,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "329:4:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Staker",
+            "nameLocation": "234:6:37",
+            "nodeType": "StructDefinition",
+            "scope": 6949,
+            "src": "227:121:37",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "AkapzPoolObjects.StakeData",
+            "id": 6938,
+            "members": [
+              {
+                "constant": false,
+                "id": 6922,
+                "mutability": "mutable",
+                "name": "staker",
+                "nameLocation": "389:6:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "381:14:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6921,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "381:7:37",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6925,
+                "mutability": "mutable",
+                "name": "lpToken",
+                "nameLocation": "420:7:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "405:22:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                  "typeString": "contract IUniswapV2Pair"
+                },
+                "typeName": {
+                  "id": 6924,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 6923,
+                    "name": "IUniswapV2Pair",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 8328,
+                    "src": "405:14:37"
+                  },
+                  "referencedDeclaration": 8328,
+                  "src": "405:14:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                    "typeString": "contract IUniswapV2Pair"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6927,
+                "mutability": "mutable",
+                "name": "stakedLPTokenAmount",
+                "nameLocation": "445:19:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "437:27:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6926,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "437:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6929,
+                "mutability": "mutable",
+                "name": "startBlock",
+                "nameLocation": "482:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "474:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6928,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "474:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6931,
+                "mutability": "mutable",
+                "name": "shareOfPool",
+                "nameLocation": "510:11:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "502:19:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6930,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "502:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6933,
+                "mutability": "mutable",
+                "name": "allocPoint",
+                "nameLocation": "539:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "531:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6932,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "531:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6935,
+                "mutability": "mutable",
+                "name": "lastRewardBlock",
+                "nameLocation": "567:15:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "559:23:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6934,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "559:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6937,
+                "mutability": "mutable",
+                "name": "accPerShare",
+                "nameLocation": "600:11:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "592:19:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6936,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "592:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "StakeData",
+            "nameLocation": "361:9:37",
+            "nodeType": "StructDefinition",
+            "scope": 6949,
+            "src": "354:264:37",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "AkapzPoolObjects.Pool",
+            "id": 6948,
+            "members": [
+              {
+                "constant": false,
+                "id": 6941,
+                "mutability": "mutable",
+                "name": "lpToken",
+                "nameLocation": "661:7:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "646:22:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                  "typeString": "contract IUniswapV2Pair"
+                },
+                "typeName": {
+                  "id": 6940,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 6939,
+                    "name": "IUniswapV2Pair",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 8328,
+                    "src": "646:14:37"
+                  },
+                  "referencedDeclaration": 8328,
+                  "src": "646:14:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                    "typeString": "contract IUniswapV2Pair"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6943,
+                "mutability": "mutable",
+                "name": "allocPoint",
+                "nameLocation": "686:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "678:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6942,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "678:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6945,
+                "mutability": "mutable",
+                "name": "lastRewardBlock",
+                "nameLocation": "714:15:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "706:23:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6944,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "706:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6947,
+                "mutability": "mutable",
+                "name": "accPerShare",
+                "nameLocation": "747:11:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "739:19:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6946,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "739:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Pool",
+            "nameLocation": "631:4:37",
+            "nodeType": "StructDefinition",
+            "scope": 6949,
+            "src": "624:141:37",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6950,
+        "src": "194:574:37",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:736:37"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Pools/AkapzPoolObjects.sol",
+    "exportedSymbols": {
+      "AkapzPoolObjects": [
+        6949
+      ],
+      "IERC20": [
+        2202
+      ],
+      "IUniswapV2Pair": [
+        8328
+      ]
+    },
+    "id": 6950,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6907,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:37"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 6909,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6950,
+        "sourceUnit": 2203,
+        "src": "56:72:37",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 6908,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "65:6:37",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/v2-core/contracts/interfaces/IUniswapV2Pair.sol",
+        "file": "../../v2-core/contracts/interfaces/IUniswapV2Pair.sol",
+        "id": 6910,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6950,
+        "sourceUnit": 8329,
+        "src": "129:63:37",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AkapzPoolObjects",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 6949,
+        "linearizedBaseContracts": [
+          6949
+        ],
+        "name": "AkapzPoolObjects",
+        "nameLocation": "203:16:37",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "AkapzPoolObjects.Staker",
+            "id": 6920,
+            "members": [
+              {
+                "constant": false,
+                "id": 6913,
+                "mutability": "mutable",
+                "name": "stakeIds",
+                "nameLocation": "259:8:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "251:16:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 6911,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:5:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 6912,
+                  "nodeType": "ArrayTypeName",
+                  "src": "251:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6915,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "285:6:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "277:14:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6914,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6917,
+                "mutability": "mutable",
+                "name": "rewardDebt",
+                "nameLocation": "309:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "301:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6916,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6919,
+                "mutability": "mutable",
+                "name": "blockTs",
+                "nameLocation": "334:7:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6920,
+                "src": "329:12:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6918,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "329:4:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Staker",
+            "nameLocation": "234:6:37",
+            "nodeType": "StructDefinition",
+            "scope": 6949,
+            "src": "227:121:37",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "AkapzPoolObjects.StakeData",
+            "id": 6938,
+            "members": [
+              {
+                "constant": false,
+                "id": 6922,
+                "mutability": "mutable",
+                "name": "staker",
+                "nameLocation": "389:6:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "381:14:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6921,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "381:7:37",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6925,
+                "mutability": "mutable",
+                "name": "lpToken",
+                "nameLocation": "420:7:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "405:22:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                  "typeString": "contract IUniswapV2Pair"
+                },
+                "typeName": {
+                  "id": 6924,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 6923,
+                    "name": "IUniswapV2Pair",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 8328,
+                    "src": "405:14:37"
+                  },
+                  "referencedDeclaration": 8328,
+                  "src": "405:14:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                    "typeString": "contract IUniswapV2Pair"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6927,
+                "mutability": "mutable",
+                "name": "stakedLPTokenAmount",
+                "nameLocation": "445:19:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "437:27:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6926,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "437:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6929,
+                "mutability": "mutable",
+                "name": "startBlock",
+                "nameLocation": "482:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "474:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6928,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "474:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6931,
+                "mutability": "mutable",
+                "name": "shareOfPool",
+                "nameLocation": "510:11:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "502:19:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6930,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "502:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6933,
+                "mutability": "mutable",
+                "name": "allocPoint",
+                "nameLocation": "539:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "531:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6932,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "531:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6935,
+                "mutability": "mutable",
+                "name": "lastRewardBlock",
+                "nameLocation": "567:15:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "559:23:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6934,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "559:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6937,
+                "mutability": "mutable",
+                "name": "accPerShare",
+                "nameLocation": "600:11:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6938,
+                "src": "592:19:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6936,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "592:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "StakeData",
+            "nameLocation": "361:9:37",
+            "nodeType": "StructDefinition",
+            "scope": 6949,
+            "src": "354:264:37",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "AkapzPoolObjects.Pool",
+            "id": 6948,
+            "members": [
+              {
+                "constant": false,
+                "id": 6941,
+                "mutability": "mutable",
+                "name": "lpToken",
+                "nameLocation": "661:7:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "646:22:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                  "typeString": "contract IUniswapV2Pair"
+                },
+                "typeName": {
+                  "id": 6940,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 6939,
+                    "name": "IUniswapV2Pair",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 8328,
+                    "src": "646:14:37"
+                  },
+                  "referencedDeclaration": 8328,
+                  "src": "646:14:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IUniswapV2Pair_$8328",
+                    "typeString": "contract IUniswapV2Pair"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6943,
+                "mutability": "mutable",
+                "name": "allocPoint",
+                "nameLocation": "686:10:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "678:18:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6942,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "678:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6945,
+                "mutability": "mutable",
+                "name": "lastRewardBlock",
+                "nameLocation": "714:15:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "706:23:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6944,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "706:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6947,
+                "mutability": "mutable",
+                "name": "accPerShare",
+                "nameLocation": "747:11:37",
+                "nodeType": "VariableDeclaration",
+                "scope": 6948,
+                "src": "739:19:37",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6946,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "739:7:37",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Pool",
+            "nameLocation": "631:4:37",
+            "nodeType": "StructDefinition",
+            "scope": 6949,
+            "src": "624:141:37",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6950,
+        "src": "194:574:37",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:736:37"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-16T18:00:38.053Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

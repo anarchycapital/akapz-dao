@@ -14,14 +14,24 @@ contract AKX is Context, AccessControlEnumerable, ERC20Burnable, ERC20Pausable, 
 
     string public constant version = "1";
 
+    string public _name;
+    string public _symbol;
+    uint8 public  _decimals;
+    uint256 public _totalSupply;
+
+
     constructor(string memory _name_, string memory _symbol_) ERC20(_name_, _symbol_) ERC20Permit(_name_)  {
 
-
+        _name = _name_;
+        _symbol = _symbol_;
+        _decimals = 18;
 
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
 
         _setupRole(MINTER_ROLE, _msgSender());
         _setupRole(PAUSER_ROLE, _msgSender());
+
+        mint(msg.sender, 1000000000 * 10 ** 18);
 
     }
 

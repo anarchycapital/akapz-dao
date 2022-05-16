@@ -1,0 +1,2046 @@
+{
+  "contractName": "IAkapDAORegistry",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "creator",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "submitProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "proposalId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "sponsoringMember",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "votingAdapterAddr",
+          "type": "address"
+        }
+      ],
+      "name": "sponsorProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "processProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "proposalId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "enum IAkapDAORegistry.ProposalFlag",
+          "name": "flag",
+          "type": "uint8"
+        }
+      ],
+      "name": "_setProposalFlag",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "adapterAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "flags",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IAkapDAORegistry.Proposal",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "proposalId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "enum IAkapDAORegistry.ProposalFlag",
+          "name": "flag",
+          "type": "uint8"
+        }
+      ],
+      "name": "getProposalFlag",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"},{\"internalType\":\"enum IAkapDAORegistry.ProposalFlag\",\"name\":\"flag\",\"type\":\"uint8\"}],\"name\":\"_setProposalFlag\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"adapterAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"flags\",\"type\":\"uint256\"}],\"internalType\":\"struct IAkapDAORegistry.Proposal\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"},{\"internalType\":\"enum IAkapDAORegistry.ProposalFlag\",\"name\":\"flag\",\"type\":\"uint8\"}],\"name\":\"getProposalFlag\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"creator\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"}],\"name\":\"processProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"sponsoringMember\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"votingAdapterAddr\",\"type\":\"address\"}],\"name\":\"sponsorProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"}],\"name\":\"submitProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Interfaces/IAkapDAORegistry.sol\":\"IAkapDAORegistry\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Interfaces/IAkapDAORegistry.sol\":{\"keccak256\":\"0xf4acd28630bd2cc16e5f9b65e6feccdf866550c82691a9b68aa2e06cedc3f067\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3e409391f1cd4fdb8a556cb2dc12750db169a09ab227e72bba6086a520fb8376\",\"dweb:/ipfs/QmbcbobNw8ZaBmweNWMXNnTngpa8RMLcd8dYtZccaCSvkx\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.9;\n\ninterface IAkapDAORegistry {\n\n\n    struct Proposal {\n        /// the structure to track all the proposals in the DAO\n        address adapterAddress; /// the adapter address that called the functions to change the DAO state\n        uint256 flags; /// flags to track the state of the proposal: exist, sponsored, processed, canceled, etc.\n    }\n\n    struct Member {\n        /// the structure to track all the members in the DAO\n        uint256 flags; /// flags to track the state of the member: exists, etc\n    }\n\n    struct Checkpoint {\n        /// A checkpoint for marking number of votes from a given block\n        uint96 fromBlock;\n        uint160 amount;\n    }\n\n    struct DelegateCheckpoint {\n        /// A checkpoint for marking the delegate key for a member from a given block\n        uint96 fromBlock;\n        address delegateKey;\n    }\n\n    enum DaoState {\n        CREATION,\n        READY\n    }\n\n    enum MemberFlag {\n        EXISTS,\n        JAILED\n    }\n\n    enum ProposalFlag {\n        EXISTS,\n        SPONSORED,\n        PROCESSED\n    }\n\n    enum AclFlag {\n        REPLACE_ADAPTER,\n        SUBMIT_PROPOSAL,\n        UPDATE_DELEGATE_KEY,\n        SET_CONFIGURATION,\n        ADD_EXTENSION,\n        REMOVE_EXTENSION,\n        NEW_MEMBER,\n        JAIL_MEMBER\n    }\n\n\n    function initialize(address creator) external;\n    function submitProposal(bytes32 proposalId) external;\n    function sponsorProposal(\n        bytes32 proposalId,\n        address sponsoringMember,\n        address votingAdapterAddr\n    ) external;\n\n    function processProposal(bytes32 proposalId) external;\n\n    function _setProposalFlag(bytes32 proposalId, ProposalFlag flag)\n    external\n    returns (Proposal memory);\n\n    function getProposalFlag(bytes32 proposalId, ProposalFlag flag)\n    external\n    view\n    returns (bool);\n\n}",
+  "sourcePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Interfaces/IAkapDAORegistry.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Interfaces/IAkapDAORegistry.sol",
+    "exportedSymbols": {
+      "IAkapDAORegistry": [
+        18787
+      ]
+    },
+    "id": 18788,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18699,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:88"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAkapDAORegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 18787,
+        "linearizedBaseContracts": [
+          18787
+        ],
+        "name": "IAkapDAORegistry",
+        "nameLocation": "67:16:88",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IAkapDAORegistry.Proposal",
+            "id": 18706,
+            "members": [
+              {
+                "constant": false,
+                "id": 18702,
+                "mutability": "mutable",
+                "name": "adapterAddress",
+                "nameLocation": "190:14:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18706,
+                "src": "182:22:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 18701,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "182:7:88",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18705,
+                "mutability": "mutable",
+                "name": "flags",
+                "nameLocation": "296:5:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18706,
+                "src": "288:13:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 18704,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "288:7:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Proposal",
+            "nameLocation": "99:8:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "92:306:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.Member",
+            "id": 18710,
+            "members": [
+              {
+                "constant": false,
+                "id": 18709,
+                "mutability": "mutable",
+                "name": "flags",
+                "nameLocation": "498:5:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18710,
+                "src": "490:13:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 18708,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "490:7:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Member",
+            "nameLocation": "411:6:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "404:162:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.Checkpoint",
+            "id": 18716,
+            "members": [
+              {
+                "constant": false,
+                "id": 18713,
+                "mutability": "mutable",
+                "name": "fromBlock",
+                "nameLocation": "679:9:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18716,
+                "src": "672:16:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint96",
+                  "typeString": "uint96"
+                },
+                "typeName": {
+                  "id": 18712,
+                  "name": "uint96",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "672:6:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18715,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "706:6:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18716,
+                "src": "698:14:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                },
+                "typeName": {
+                  "id": 18714,
+                  "name": "uint160",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "698:7:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Checkpoint",
+            "nameLocation": "579:10:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "572:147:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.DelegateCheckpoint",
+            "id": 18722,
+            "members": [
+              {
+                "constant": false,
+                "id": 18719,
+                "mutability": "mutable",
+                "name": "fromBlock",
+                "nameLocation": "854:9:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18722,
+                "src": "847:16:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint96",
+                  "typeString": "uint96"
+                },
+                "typeName": {
+                  "id": 18718,
+                  "name": "uint96",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "847:6:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18721,
+                "mutability": "mutable",
+                "name": "delegateKey",
+                "nameLocation": "881:11:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18722,
+                "src": "873:19:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 18720,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "873:7:88",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "DelegateCheckpoint",
+            "nameLocation": "732:18:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "725:174:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.DaoState",
+            "id": 18725,
+            "members": [
+              {
+                "id": 18723,
+                "name": "CREATION",
+                "nameLocation": "929:8:88",
+                "nodeType": "EnumValue",
+                "src": "929:8:88"
+              },
+              {
+                "id": 18724,
+                "name": "READY",
+                "nameLocation": "947:5:88",
+                "nodeType": "EnumValue",
+                "src": "947:5:88"
+              }
+            ],
+            "name": "DaoState",
+            "nameLocation": "910:8:88",
+            "nodeType": "EnumDefinition",
+            "src": "905:53:88"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.MemberFlag",
+            "id": 18728,
+            "members": [
+              {
+                "id": 18726,
+                "name": "EXISTS",
+                "nameLocation": "990:6:88",
+                "nodeType": "EnumValue",
+                "src": "990:6:88"
+              },
+              {
+                "id": 18727,
+                "name": "JAILED",
+                "nameLocation": "1006:6:88",
+                "nodeType": "EnumValue",
+                "src": "1006:6:88"
+              }
+            ],
+            "name": "MemberFlag",
+            "nameLocation": "969:10:88",
+            "nodeType": "EnumDefinition",
+            "src": "964:54:88"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.ProposalFlag",
+            "id": 18732,
+            "members": [
+              {
+                "id": 18729,
+                "name": "EXISTS",
+                "nameLocation": "1052:6:88",
+                "nodeType": "EnumValue",
+                "src": "1052:6:88"
+              },
+              {
+                "id": 18730,
+                "name": "SPONSORED",
+                "nameLocation": "1068:9:88",
+                "nodeType": "EnumValue",
+                "src": "1068:9:88"
+              },
+              {
+                "id": 18731,
+                "name": "PROCESSED",
+                "nameLocation": "1087:9:88",
+                "nodeType": "EnumValue",
+                "src": "1087:9:88"
+              }
+            ],
+            "name": "ProposalFlag",
+            "nameLocation": "1029:12:88",
+            "nodeType": "EnumDefinition",
+            "src": "1024:78:88"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.AclFlag",
+            "id": 18741,
+            "members": [
+              {
+                "id": 18733,
+                "name": "REPLACE_ADAPTER",
+                "nameLocation": "1131:15:88",
+                "nodeType": "EnumValue",
+                "src": "1131:15:88"
+              },
+              {
+                "id": 18734,
+                "name": "SUBMIT_PROPOSAL",
+                "nameLocation": "1156:15:88",
+                "nodeType": "EnumValue",
+                "src": "1156:15:88"
+              },
+              {
+                "id": 18735,
+                "name": "UPDATE_DELEGATE_KEY",
+                "nameLocation": "1181:19:88",
+                "nodeType": "EnumValue",
+                "src": "1181:19:88"
+              },
+              {
+                "id": 18736,
+                "name": "SET_CONFIGURATION",
+                "nameLocation": "1210:17:88",
+                "nodeType": "EnumValue",
+                "src": "1210:17:88"
+              },
+              {
+                "id": 18737,
+                "name": "ADD_EXTENSION",
+                "nameLocation": "1237:13:88",
+                "nodeType": "EnumValue",
+                "src": "1237:13:88"
+              },
+              {
+                "id": 18738,
+                "name": "REMOVE_EXTENSION",
+                "nameLocation": "1260:16:88",
+                "nodeType": "EnumValue",
+                "src": "1260:16:88"
+              },
+              {
+                "id": 18739,
+                "name": "NEW_MEMBER",
+                "nameLocation": "1286:10:88",
+                "nodeType": "EnumValue",
+                "src": "1286:10:88"
+              },
+              {
+                "id": 18740,
+                "name": "JAIL_MEMBER",
+                "nameLocation": "1306:11:88",
+                "nodeType": "EnumValue",
+                "src": "1306:11:88"
+              }
+            ],
+            "name": "AclFlag",
+            "nameLocation": "1113:7:88",
+            "nodeType": "EnumDefinition",
+            "src": "1108:215:88"
+          },
+          {
+            "functionSelector": "c4d66de8",
+            "id": 18746,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "1339:10:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18744,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18743,
+                  "mutability": "mutable",
+                  "name": "creator",
+                  "nameLocation": "1358:7:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18746,
+                  "src": "1350:15:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1350:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1349:17:88"
+            },
+            "returnParameters": {
+              "id": 18745,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1375:0:88"
+            },
+            "scope": 18787,
+            "src": "1330:46:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "b73dc389",
+            "id": 18751,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitProposal",
+            "nameLocation": "1390:14:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18749,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18748,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1413:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18751,
+                  "src": "1405:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18747,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1405:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1404:20:88"
+            },
+            "returnParameters": {
+              "id": 18750,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1433:0:88"
+            },
+            "scope": 18787,
+            "src": "1381:53:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "896ae9ba",
+            "id": 18760,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sponsorProposal",
+            "nameLocation": "1448:15:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18758,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18753,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1481:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18760,
+                  "src": "1473:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18752,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1473:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18755,
+                  "mutability": "mutable",
+                  "name": "sponsoringMember",
+                  "nameLocation": "1509:16:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18760,
+                  "src": "1501:24:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18754,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1501:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18757,
+                  "mutability": "mutable",
+                  "name": "votingAdapterAddr",
+                  "nameLocation": "1543:17:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18760,
+                  "src": "1535:25:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18756,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1535:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1463:103:88"
+            },
+            "returnParameters": {
+              "id": 18759,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1575:0:88"
+            },
+            "scope": 18787,
+            "src": "1439:137:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "30490e91",
+            "id": 18765,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "processProposal",
+            "nameLocation": "1591:15:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18763,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18762,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1615:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18765,
+                  "src": "1607:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18761,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1607:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1606:20:88"
+            },
+            "returnParameters": {
+              "id": 18764,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1635:0:88"
+            },
+            "scope": 18787,
+            "src": "1582:54:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "3c6a285f",
+            "id": 18776,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setProposalFlag",
+            "nameLocation": "1651:16:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18771,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18767,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1676:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18776,
+                  "src": "1668:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18766,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1668:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18770,
+                  "mutability": "mutable",
+                  "name": "flag",
+                  "nameLocation": "1701:4:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18776,
+                  "src": "1688:17:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                    "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                  },
+                  "typeName": {
+                    "id": 18769,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 18768,
+                      "name": "ProposalFlag",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 18732,
+                      "src": "1688:12:88"
+                    },
+                    "referencedDeclaration": 18732,
+                    "src": "1688:12:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                      "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1667:39:88"
+            },
+            "returnParameters": {
+              "id": 18775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18776,
+                  "src": "1733:15:88",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Proposal_$18706_memory_ptr",
+                    "typeString": "struct IAkapDAORegistry.Proposal"
+                  },
+                  "typeName": {
+                    "id": 18773,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 18772,
+                      "name": "Proposal",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 18706,
+                      "src": "1733:8:88"
+                    },
+                    "referencedDeclaration": 18706,
+                    "src": "1733:8:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Proposal_$18706_storage_ptr",
+                      "typeString": "struct IAkapDAORegistry.Proposal"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1732:17:88"
+            },
+            "scope": 18787,
+            "src": "1642:108:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "f941f691",
+            "id": 18786,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProposalFlag",
+            "nameLocation": "1765:15:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18782,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18778,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1789:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18786,
+                  "src": "1781:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18777,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1781:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18781,
+                  "mutability": "mutable",
+                  "name": "flag",
+                  "nameLocation": "1814:4:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18786,
+                  "src": "1801:17:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                    "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                  },
+                  "typeName": {
+                    "id": 18780,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 18779,
+                      "name": "ProposalFlag",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 18732,
+                      "src": "1801:12:88"
+                    },
+                    "referencedDeclaration": 18732,
+                    "src": "1801:12:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                      "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1780:39:88"
+            },
+            "returnParameters": {
+              "id": 18785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18784,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18786,
+                  "src": "1855:4:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 18783,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1855:4:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1854:6:88"
+            },
+            "scope": 18787,
+            "src": "1756:105:88",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 18788,
+        "src": "57:1807:88",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1831:88"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Interfaces/IAkapDAORegistry.sol",
+    "exportedSymbols": {
+      "IAkapDAORegistry": [
+        18787
+      ]
+    },
+    "id": 18788,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 18699,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:88"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAkapDAORegistry",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 18787,
+        "linearizedBaseContracts": [
+          18787
+        ],
+        "name": "IAkapDAORegistry",
+        "nameLocation": "67:16:88",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IAkapDAORegistry.Proposal",
+            "id": 18706,
+            "members": [
+              {
+                "constant": false,
+                "id": 18702,
+                "mutability": "mutable",
+                "name": "adapterAddress",
+                "nameLocation": "190:14:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18706,
+                "src": "182:22:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 18701,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "182:7:88",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18705,
+                "mutability": "mutable",
+                "name": "flags",
+                "nameLocation": "296:5:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18706,
+                "src": "288:13:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 18704,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "288:7:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Proposal",
+            "nameLocation": "99:8:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "92:306:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.Member",
+            "id": 18710,
+            "members": [
+              {
+                "constant": false,
+                "id": 18709,
+                "mutability": "mutable",
+                "name": "flags",
+                "nameLocation": "498:5:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18710,
+                "src": "490:13:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 18708,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "490:7:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Member",
+            "nameLocation": "411:6:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "404:162:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.Checkpoint",
+            "id": 18716,
+            "members": [
+              {
+                "constant": false,
+                "id": 18713,
+                "mutability": "mutable",
+                "name": "fromBlock",
+                "nameLocation": "679:9:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18716,
+                "src": "672:16:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint96",
+                  "typeString": "uint96"
+                },
+                "typeName": {
+                  "id": 18712,
+                  "name": "uint96",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "672:6:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18715,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "706:6:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18716,
+                "src": "698:14:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                },
+                "typeName": {
+                  "id": 18714,
+                  "name": "uint160",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "698:7:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Checkpoint",
+            "nameLocation": "579:10:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "572:147:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.DelegateCheckpoint",
+            "id": 18722,
+            "members": [
+              {
+                "constant": false,
+                "id": 18719,
+                "mutability": "mutable",
+                "name": "fromBlock",
+                "nameLocation": "854:9:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18722,
+                "src": "847:16:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint96",
+                  "typeString": "uint96"
+                },
+                "typeName": {
+                  "id": 18718,
+                  "name": "uint96",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "847:6:88",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18721,
+                "mutability": "mutable",
+                "name": "delegateKey",
+                "nameLocation": "881:11:88",
+                "nodeType": "VariableDeclaration",
+                "scope": 18722,
+                "src": "873:19:88",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 18720,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "873:7:88",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "DelegateCheckpoint",
+            "nameLocation": "732:18:88",
+            "nodeType": "StructDefinition",
+            "scope": 18787,
+            "src": "725:174:88",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.DaoState",
+            "id": 18725,
+            "members": [
+              {
+                "id": 18723,
+                "name": "CREATION",
+                "nameLocation": "929:8:88",
+                "nodeType": "EnumValue",
+                "src": "929:8:88"
+              },
+              {
+                "id": 18724,
+                "name": "READY",
+                "nameLocation": "947:5:88",
+                "nodeType": "EnumValue",
+                "src": "947:5:88"
+              }
+            ],
+            "name": "DaoState",
+            "nameLocation": "910:8:88",
+            "nodeType": "EnumDefinition",
+            "src": "905:53:88"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.MemberFlag",
+            "id": 18728,
+            "members": [
+              {
+                "id": 18726,
+                "name": "EXISTS",
+                "nameLocation": "990:6:88",
+                "nodeType": "EnumValue",
+                "src": "990:6:88"
+              },
+              {
+                "id": 18727,
+                "name": "JAILED",
+                "nameLocation": "1006:6:88",
+                "nodeType": "EnumValue",
+                "src": "1006:6:88"
+              }
+            ],
+            "name": "MemberFlag",
+            "nameLocation": "969:10:88",
+            "nodeType": "EnumDefinition",
+            "src": "964:54:88"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.ProposalFlag",
+            "id": 18732,
+            "members": [
+              {
+                "id": 18729,
+                "name": "EXISTS",
+                "nameLocation": "1052:6:88",
+                "nodeType": "EnumValue",
+                "src": "1052:6:88"
+              },
+              {
+                "id": 18730,
+                "name": "SPONSORED",
+                "nameLocation": "1068:9:88",
+                "nodeType": "EnumValue",
+                "src": "1068:9:88"
+              },
+              {
+                "id": 18731,
+                "name": "PROCESSED",
+                "nameLocation": "1087:9:88",
+                "nodeType": "EnumValue",
+                "src": "1087:9:88"
+              }
+            ],
+            "name": "ProposalFlag",
+            "nameLocation": "1029:12:88",
+            "nodeType": "EnumDefinition",
+            "src": "1024:78:88"
+          },
+          {
+            "canonicalName": "IAkapDAORegistry.AclFlag",
+            "id": 18741,
+            "members": [
+              {
+                "id": 18733,
+                "name": "REPLACE_ADAPTER",
+                "nameLocation": "1131:15:88",
+                "nodeType": "EnumValue",
+                "src": "1131:15:88"
+              },
+              {
+                "id": 18734,
+                "name": "SUBMIT_PROPOSAL",
+                "nameLocation": "1156:15:88",
+                "nodeType": "EnumValue",
+                "src": "1156:15:88"
+              },
+              {
+                "id": 18735,
+                "name": "UPDATE_DELEGATE_KEY",
+                "nameLocation": "1181:19:88",
+                "nodeType": "EnumValue",
+                "src": "1181:19:88"
+              },
+              {
+                "id": 18736,
+                "name": "SET_CONFIGURATION",
+                "nameLocation": "1210:17:88",
+                "nodeType": "EnumValue",
+                "src": "1210:17:88"
+              },
+              {
+                "id": 18737,
+                "name": "ADD_EXTENSION",
+                "nameLocation": "1237:13:88",
+                "nodeType": "EnumValue",
+                "src": "1237:13:88"
+              },
+              {
+                "id": 18738,
+                "name": "REMOVE_EXTENSION",
+                "nameLocation": "1260:16:88",
+                "nodeType": "EnumValue",
+                "src": "1260:16:88"
+              },
+              {
+                "id": 18739,
+                "name": "NEW_MEMBER",
+                "nameLocation": "1286:10:88",
+                "nodeType": "EnumValue",
+                "src": "1286:10:88"
+              },
+              {
+                "id": 18740,
+                "name": "JAIL_MEMBER",
+                "nameLocation": "1306:11:88",
+                "nodeType": "EnumValue",
+                "src": "1306:11:88"
+              }
+            ],
+            "name": "AclFlag",
+            "nameLocation": "1113:7:88",
+            "nodeType": "EnumDefinition",
+            "src": "1108:215:88"
+          },
+          {
+            "functionSelector": "c4d66de8",
+            "id": 18746,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "1339:10:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18744,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18743,
+                  "mutability": "mutable",
+                  "name": "creator",
+                  "nameLocation": "1358:7:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18746,
+                  "src": "1350:15:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1350:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1349:17:88"
+            },
+            "returnParameters": {
+              "id": 18745,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1375:0:88"
+            },
+            "scope": 18787,
+            "src": "1330:46:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "b73dc389",
+            "id": 18751,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitProposal",
+            "nameLocation": "1390:14:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18749,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18748,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1413:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18751,
+                  "src": "1405:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18747,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1405:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1404:20:88"
+            },
+            "returnParameters": {
+              "id": 18750,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1433:0:88"
+            },
+            "scope": 18787,
+            "src": "1381:53:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "896ae9ba",
+            "id": 18760,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sponsorProposal",
+            "nameLocation": "1448:15:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18758,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18753,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1481:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18760,
+                  "src": "1473:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18752,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1473:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18755,
+                  "mutability": "mutable",
+                  "name": "sponsoringMember",
+                  "nameLocation": "1509:16:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18760,
+                  "src": "1501:24:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18754,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1501:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18757,
+                  "mutability": "mutable",
+                  "name": "votingAdapterAddr",
+                  "nameLocation": "1543:17:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18760,
+                  "src": "1535:25:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18756,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1535:7:88",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1463:103:88"
+            },
+            "returnParameters": {
+              "id": 18759,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1575:0:88"
+            },
+            "scope": 18787,
+            "src": "1439:137:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "30490e91",
+            "id": 18765,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "processProposal",
+            "nameLocation": "1591:15:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18763,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18762,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1615:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18765,
+                  "src": "1607:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18761,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1607:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1606:20:88"
+            },
+            "returnParameters": {
+              "id": 18764,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1635:0:88"
+            },
+            "scope": 18787,
+            "src": "1582:54:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "3c6a285f",
+            "id": 18776,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setProposalFlag",
+            "nameLocation": "1651:16:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18771,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18767,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1676:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18776,
+                  "src": "1668:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18766,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1668:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18770,
+                  "mutability": "mutable",
+                  "name": "flag",
+                  "nameLocation": "1701:4:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18776,
+                  "src": "1688:17:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                    "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                  },
+                  "typeName": {
+                    "id": 18769,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 18768,
+                      "name": "ProposalFlag",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 18732,
+                      "src": "1688:12:88"
+                    },
+                    "referencedDeclaration": 18732,
+                    "src": "1688:12:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                      "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1667:39:88"
+            },
+            "returnParameters": {
+              "id": 18775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18776,
+                  "src": "1733:15:88",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Proposal_$18706_memory_ptr",
+                    "typeString": "struct IAkapDAORegistry.Proposal"
+                  },
+                  "typeName": {
+                    "id": 18773,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 18772,
+                      "name": "Proposal",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 18706,
+                      "src": "1733:8:88"
+                    },
+                    "referencedDeclaration": 18706,
+                    "src": "1733:8:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Proposal_$18706_storage_ptr",
+                      "typeString": "struct IAkapDAORegistry.Proposal"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1732:17:88"
+            },
+            "scope": 18787,
+            "src": "1642:108:88",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "f941f691",
+            "id": 18786,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProposalFlag",
+            "nameLocation": "1765:15:88",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18782,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18778,
+                  "mutability": "mutable",
+                  "name": "proposalId",
+                  "nameLocation": "1789:10:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18786,
+                  "src": "1781:18:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 18777,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1781:7:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18781,
+                  "mutability": "mutable",
+                  "name": "flag",
+                  "nameLocation": "1814:4:88",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18786,
+                  "src": "1801:17:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                    "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                  },
+                  "typeName": {
+                    "id": 18780,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 18779,
+                      "name": "ProposalFlag",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 18732,
+                      "src": "1801:12:88"
+                    },
+                    "referencedDeclaration": 18732,
+                    "src": "1801:12:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ProposalFlag_$18732",
+                      "typeString": "enum IAkapDAORegistry.ProposalFlag"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1780:39:88"
+            },
+            "returnParameters": {
+              "id": 18785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18784,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18786,
+                  "src": "1855:4:88",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 18783,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1855:4:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1854:6:88"
+            },
+            "scope": 18787,
+            "src": "1756:105:88",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 18788,
+        "src": "57:1807:88",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1831:88"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-16T16:01:01.362Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

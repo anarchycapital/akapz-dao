@@ -7,11 +7,11 @@ import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
 import {SafeMath} from "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import {Akapz} from "../Governance/Akapz.sol"; // Governance Token
 import {AKX} from "../AKX/AKX.sol";
-import {IWETH} from "@uniswap/v2-periphery/contracts/interfaces/IWETH.sol";
-import {UniswapV2Library} from "@uniswap/v2-periphery/contracts/libraries/UniswapV2Library.sol";
-import {IUniswapV2Factory} from "@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol";
-import {IUniswapV2Router02} from "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol";
-import {IUniswapV2Pair} from "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol";
+import {IWETH} from "../../v2-periphery/contracts/interfaces/IWETH.sol";
+import {UniswapV2Library} from "../../v2-periphery/contracts/libraries/UniswapV2Library.sol";
+import {IUniswapV2Factory} from "../../v2-core/contracts/interfaces/IUniswapV2Factory.sol";
+import {IUniswapV2Router02} from "../../v2-periphery/contracts/interfaces/IUniswapV2Router02.sol";
+import {IUniswapV2Pair} from "../../v2-core/contracts/interfaces/IUniswapV2Pair.sol";
 import {AkapzFarmingLPToken} from "./AkapzFarmingLPToken.sol";
 
 
@@ -28,6 +28,7 @@ contract AkapzStakePool is AkapzPoolStorage {
     IUniswapV2Router02 public uniswapV2Router02;
 
     address AKX_TOKEN;
+    address AKAPZ_FARMING_LP_TOKEN;
     address AKAPZ_GOVERNANCE_TOKEN;
     address WETH_TOKEN;
     address UNISWAP_V2_FACTORY;
@@ -47,16 +48,19 @@ contract AkapzStakePool is AkapzPoolStorage {
 
     constructor(AKX _AKXToken,
         Akapz _akapzGovernanceToken,
+        AkapzFarmingLPToken _akapzFarmingLPToken,
         IUniswapV2Factory _uniswapV2Factory,
         IUniswapV2Router02 _uniswapV2Router02
     ) {
         AKXToken = _AKXToken;
         AkapzGovernanceToken = _akapzGovernanceToken;
+        akapzFarmingLPToken = _akapzFarmingLPToken;
         uniswapV2Factory = _uniswapV2Factory;
         uniswapV2Router02 = _uniswapV2Router02;
         wETH = IWETH(uniswapV2Router02.WETH());
         AKX_TOKEN = address(_AKXToken);
         AKAPZ_GOVERNANCE_TOKEN = address(_akapzGovernanceToken);
+        AKAPZ_FARMING_LP_TOKEN = address(_akapzFarmingLPToken);
         UNISWAP_V2_FACTORY = address(_uniswapV2Factory);
         UNISWAP_V2_ROUTER_02 = address(_uniswapV2Router02);
         WETH_TOKEN = address(uniswapV2Router02.WETH());
@@ -107,6 +111,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         (AKXTokenAmount, ERC20Amount, liquidity) = _addLiquidityWithERC20(erc20, AKXTokenAmountDesired, ERC20AmountDesired);
 
         // minting from lp farming
+        akapzFarmingLPToken.mint(msg.sender, liquidity);
 
 
         /// Back LPtoken to a staker
