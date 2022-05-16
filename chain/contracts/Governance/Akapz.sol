@@ -51,32 +51,6 @@ function initialize(string memory name, string memory symbol, address owner_) pu
 
 }
 
-    function swapEthForExactTokens(address _tokenAddr) public override(IUniswapV2Router02) {
-        address[] memory path = new address[](2);
-        path[0] = address(_tokenAddr);
-        path[1] = uniswapRouter.WETH();
-    }
-
-    function convertEthToDai(uint daiAmount) public payable {
-        uint deadline = block.timestamp + 15; // using 'now' for convenience, for mainnet pass deadline from frontend!
-        uniswapRouter.swapETHForExactTokens{ value: msg.value }(daiAmount, getPathForETHtoDAI(), address(this), deadline);
-
-        // refund leftover ETH to user
-        (bool success,) = msg.sender.call{ value: address(this).balance }("");
-        require(success, "refund failed");
-    }
-
-    function getEstimatedETHforDAI(uint daiAmount) public view returns (uint[] memory) {
-        return uniswapRouter.getAmountsIn(daiAmount, getPathForETHtoDAI());
-    }
-
-    function getPathForETHtoDAI() private view returns (address[] memory) {
-        address[] memory path = new address[](2);
-        path[0] = uniswapRouter.WETH();
-        path[1] = address(this);
-
-        return path;
-    }
 
 
     function _authorizeUpgrade(address newImplementation) internal virtual onlyUpgrader(msg.sender) override {}
@@ -110,7 +84,9 @@ function _afterTokenTransfer(address from, address to, uint256 amount) internal 
     super._afterTokenTransfer(from, to, amount);
 }
 
-
+function mint(address to, uint256 amount) public onlyUpgrader(msg.sender) {
+    _mint(to, amount);
+}
 
 function _mint(address to, uint256 amount) internal override(ERC20VotesUpgradeable) {
     super._mint(to, amount);

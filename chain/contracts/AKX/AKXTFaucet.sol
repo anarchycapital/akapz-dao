@@ -20,6 +20,6 @@ contract AKXTFaucet is Ownable {
         require(address(token) != address(0), "Token contract has not been set");
         uint256 tokens = 1000 * 10 ** uint256(token.decimals());
         if (token.balanceOf(msg.sender) >= tokens) revert("Cannot acquire more funds");
-        require(token.mint(msg.sender, tokens), "Failed to create funds");
+        token.mint(msg.sender, tokens);
     }
 }

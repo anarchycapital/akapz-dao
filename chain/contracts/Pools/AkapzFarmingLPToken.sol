@@ -6,7 +6,7 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract AkapzFarmingLPToken is ERC20 {
 
-    constructor() ERC20("AKX Farming Liquidity Provider Token", "AKLP", 18) {}
+    constructor() ERC20("AKX Farming Liquidity Provider Token", "AKLP") {}
 
     function mint(address to, uint mintAmount) public  {
         _mint(to, mintAmount);

@@ -1,0 +1,518 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x61012a61003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80638e89c1f7146038575b600080fd5b818015604357600080fd5b506053604f3660046086565b6065565b60405190815260200160405180910390f35b600080607160648460a7565b90506000607d828660c8565b95945050505050565b60008060408385031215609857600080fd5b50508035926020909101359150565b60008260c357634e487b7160e01b600052601260045260246000fd5b500490565b600081600019048311821515161560ef57634e487b7160e01b600052601160045260246000fd5b50029056fea26469706673582212209510a8329c963f313bb498c788ca0b672a12f5990e5064edd0d93bf5011956c964736f6c63430008090033",
+    "sourceMap": "55:393:15:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;55:393:15;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80638e89c1f7146038575b600080fd5b818015604357600080fd5b506053604f3660046086565b6065565b60405190815260200160405180910390f35b600080607160648460a7565b90506000607d828660c8565b95945050505050565b60008060408385031215609857600080fd5b50508035926020909101359150565b60008260c357634e487b7160e01b600052601260045260246000fd5b500490565b600081600019048311821515161560ef57634e487b7160e01b600052601160045260246000fd5b50029056fea26469706673582212209510a8329c963f313bb498c788ca0b672a12f5990e5064edd0d93bf5011956c964736f6c63430008090033",
+    "sourceMap": "55:393:15:-:0;;;;;;;;;;;;;;;;;;;;;;;;217:228;;;;;;;;;;-1:-1:-1;217:228:15;;;;;:::i;:::-;;:::i;:::-;;;421:25:103;;;409:2;394:18;217:228:15;;;;;;;;297:7;;345:13;355:3;345:7;:13;:::i;:::-;316:43;-1:-1:-1;369:17:15;389:23;316:43;389:10;:23;:::i;:::-;369:43;217:228;-1:-1:-1;;;;;217:228:15:o;14:248:103:-;82:6;90;143:2;131:9;122:7;118:23;114:32;111:52;;;159:1;156;149:12;111:52;-1:-1:-1;;182:23:103;;;252:2;237:18;;;224:32;;-1:-1:-1;14:248:103:o;457:217::-;497:1;523;513:132;;567:10;562:3;558:20;555:1;548:31;602:4;599:1;592:15;630:4;627:1;620:15;513:132;-1:-1:-1;659:9:103;;457:217::o;679:265::-;719:7;785:1;781;777:6;773:14;770:1;767:21;762:1;755:9;748:17;744:45;741:168;;;831:10;826:3;822:20;819:1;812:31;866:4;863:1;856:15;894:4;891:1;884:15;741:168;-1:-1:-1;929:9:103;;679:265::o",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Libraries/FeeDistribution.sol",
+    "id": 1708,
+    "exportedSymbols": {
+      "FeeDistribution": [
+        1707
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "31:417:15",
+    "nodes": [
+      {
+        "id": 1670,
+        "nodeType": "PragmaDirective",
+        "src": "31:22:15",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 1707,
+        "nodeType": "ContractDefinition",
+        "src": "55:393:15",
+        "nodes": [
+          {
+            "id": 1679,
+            "nodeType": "StructDefinition",
+            "src": "86:125:15",
+            "canonicalName": "FeeDistribution.HolderFees",
+            "members": [
+              {
+                "constant": false,
+                "id": 1672,
+                "mutability": "mutable",
+                "name": "percent",
+                "nameLocation": "119:7:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 1679,
+                "src": "114:12:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1671,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:4:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1674,
+                "mutability": "mutable",
+                "name": "feesToDistribute",
+                "nameLocation": "141:16:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 1679,
+                "src": "136:21:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1673,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:4:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1676,
+                "mutability": "mutable",
+                "name": "distributed",
+                "nameLocation": "172:11:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 1679,
+                "src": "167:16:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1675,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "167:4:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1678,
+                "mutability": "mutable",
+                "name": "period",
+                "nameLocation": "198:6:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 1679,
+                "src": "193:11:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1677,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "193:4:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "HolderFees",
+            "nameLocation": "93:10:15",
+            "scope": 1707,
+            "visibility": "public"
+          },
+          {
+            "id": 1706,
+            "nodeType": "FunctionDefinition",
+            "src": "217:228:15",
+            "body": {
+              "id": 1705,
+              "nodeType": "Block",
+              "src": "306:139:15",
+              "statements": [
+                {
+                  "assignments": [
+                    1689
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1689,
+                      "mutability": "mutable",
+                      "name": "_toPercent",
+                      "nameLocation": "324:10:15",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1705,
+                      "src": "316:18:15",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1688,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "316:7:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1696,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1694,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 1692,
+                          "name": "percent",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1683,
+                          "src": "345:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "/",
+                        "rightExpression": {
+                          "hexValue": "313030",
+                          "id": 1693,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "355:3:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_100_by_1",
+                            "typeString": "int_const 100"
+                          },
+                          "value": "100"
+                        },
+                        "src": "345:13:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 1691,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "337:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": {
+                        "id": 1690,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "337:7:15",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 1695,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "337:22:15",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "316:43:15"
+                },
+                {
+                  "assignments": [
+                    1698
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1698,
+                      "mutability": "mutable",
+                      "name": "_feesCalc",
+                      "nameLocation": "377:9:15",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1705,
+                      "src": "369:17:15",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1697,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "369:7:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1702,
+                  "initialValue": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1701,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1699,
+                      "name": "_totalFees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1681,
+                      "src": "389:10:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "id": 1700,
+                      "name": "_toPercent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1689,
+                      "src": "402:10:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "389:23:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "369:43:15"
+                },
+                {
+                  "expression": {
+                    "id": 1703,
+                    "name": "_feesCalc",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1698,
+                    "src": "429:9:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1687,
+                  "id": 1704,
+                  "nodeType": "Return",
+                  "src": "422:16:15"
+                }
+              ]
+            },
+            "functionSelector": "8e89c1f7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calcFeesToDistribute",
+            "nameLocation": "226:20:15",
+            "parameters": {
+              "id": 1684,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1681,
+                  "mutability": "mutable",
+                  "name": "_totalFees",
+                  "nameLocation": "255:10:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1706,
+                  "src": "247:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1680,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "247:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1683,
+                  "mutability": "mutable",
+                  "name": "percent",
+                  "nameLocation": "272:7:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1706,
+                  "src": "267:12:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1682,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "267:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "246:34:15"
+            },
+            "returnParameters": {
+              "id": 1687,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1686,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1706,
+                  "src": "297:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1685,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "297:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "296:9:15"
+            },
+            "scope": 1707,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "FeeDistribution",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1707
+        ],
+        "name": "FeeDistribution",
+        "nameLocation": "63:15:15",
+        "scope": 1708,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  }
+}

@@ -87,8 +87,8 @@ contract AkapzStakePool is AkapzPoolStorage {
     uint256 ERC20AmountDesired
     ) public  {
         IERC20 erc20 = IERC20(pair.token1());
-        AKXToken.safeTransfer(address(this), msg.sender, AKXTokenAmountDesired);
-        erc20.safeTransfer(address(this), msg.sender, ERC20AmountDesired);
+        AKXToken.safeTransfer( msg.sender, AKXTokenAmountDesired);
+        erc20.safeTransfer(msg.sender, ERC20AmountDesired);
         /// Check whether a pair contract exists or not
         address pairAddress = uniswapV2Factory.getPair(AKX_TOKEN, address(erc20));
         require (pairAddress > address(0), "This pair contract has not existed yet");
@@ -98,8 +98,8 @@ contract AkapzStakePool is AkapzPoolStorage {
         require (totalSupply > 0, "This pair's totalSupply is still 0. Please add liquidity at first");
 
         /// Approve each tokens for UniswapV2Router02
-        AKXToken.safeApprove(address(this), UNISWAP_V2_ROUTER_02, AKXTokenAmountDesired);
-        erc20.safeApprove(address(this), UNISWAP_V2_ROUTER_02, ERC20AmountDesired);
+        AKXToken.safeApprove(UNISWAP_V2_ROUTER_02, AKXTokenAmountDesired);
+        erc20.safeApprove(UNISWAP_V2_ROUTER_02, ERC20AmountDesired);
 
         uint256 AKXTokenAmount;
         uint256 ERC20Amount;
@@ -128,7 +128,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         uint256 ERC20AmountMin;
 
         address to = msg.sender;
-        uint deadline = now.add(15 seconds);
+        uint deadline = block.timestamp.add(15 seconds);
         (AKXTokenAmount, ERC20Amount, liquidity) = uniswapV2Router02.addLiquidity(AKX_TOKEN,
             address(erc20),
             AKXTokenAmountDesired,
@@ -149,7 +149,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         uint AKXTokenAmountDesired
     ) public payable  {
         /// Transfer AKX tokens and ETH from a user
-        AKXToken.safeTransfer(address(this), msg.sender, AKXTokenAmountDesired);
+        AKXToken.safeTransfer(msg.sender, AKXTokenAmountDesired);
         uint ETHAmountMin = msg.value;
 
         /// Convert ETH (msg.value) to WETH (ERC20) 
@@ -186,7 +186,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         uint AKXTokenMin = AKXTokenAmountDesired;  /// [Note]: 5 AKX will be set as the initial addLiquidity.
 
         address to = msg.sender;
-        uint deadline = now.add(300 seconds);
+        uint deadline = block.timestamp.add(300 seconds);
         (AKXTokenAmount, ETHAmount, liquidity) = uniswapV2Router02.addLiquidityETH(AKX_TOKEN,
             AKXTokenAmountDesired,
             AKXTokenMin,
@@ -212,7 +212,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         uint AKXTokenMin = 0;
         uint ERC20AmountMin = 0;
         address to = staker;
-        uint deadline = now.add(15 seconds);
+        uint deadline = block.timestamp.add(15 seconds);
         (AKXTokenAmount, ERC20Amount) = uniswapV2Router02.removeLiquidity(AKX_TOKEN,
             pair.token1(),
             lpTokenAmountUnStaked,
@@ -241,7 +241,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         uint AKXTokenMin = 0;
         uint ETHAmountMin = 0;  /// WETH
         address to = staker;
-        uint deadline = now.add(15 seconds);
+        uint deadline = block.timestamp.add(15 seconds);
         (AKXTokenAmount, ETHAmount) = uniswapV2Router02.removeLiquidityETH(AKX_TOKEN,
             lpTokenAmountUnStaked,
             AKXTokenMin,
@@ -307,7 +307,7 @@ contract AkapzStakePool is AkapzPoolStorage {
         uint earnedReward = _computeEarnedReward(pair);
 
         /// Mint akapzGovernanceToken as rewards for a staker
-        akapzGovernanceToken.mint(msg.sender, earnedReward);
+        AkapzGovernanceToken.mint(msg.sender, earnedReward);
     }
 
     ///---------------------------------------------------

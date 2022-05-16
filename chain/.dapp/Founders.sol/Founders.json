@@ -1,0 +1,2056 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ROLE_ADVISOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ROLE_CEO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ROLE_CFO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ROLE_CMO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ROLE_COO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ROLE_CTO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ROLE_PARTNER",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "roles",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "wallet",
+          "type": "address"
+        }
+      ],
+      "name": "_createFounder",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "roles",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "wallet",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct Founders.founderData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "_roleToString",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x61076b61003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361061009d5760003560e01c8063b91c6c2611610070578063b91c6c2614610124578063bac9dbab1461012c578063d1f8a4c114610134578063e23f2a1d1461013c578063fb76a5a71461014457600080fd5b80632a051f00146100a257806342898745146100bd57806364155547146101145780637708ea1d1461011c575b600080fd5b6100aa610164565b6040519081526020015b60405180910390f35b6101076100cb3660046105a3565b60408051606080820183528082526000602080840182905292840152825190810183529485528401929092526001600160a01b03169082015290565b6040516100b491906106bb565b6100aa6101a4565b6100aa6101cf565b6100aa6101f6565b6100aa61021d565b6100aa610244565b6100aa61026f565b610157610152366004610702565b610296565b6040516100b4919061071b565b60405160200161018b9060208082526003908201526243544f60e81b604082015260600190565b6040516020818303038152906040528051906020012081565b60405160200161018b906020808252600790820152662820a92a2722a960c91b604082015260600190565b60405160200161018b9060208082526003908201526243454f60e81b604082015260600190565b60405160200161018b90602080825260039082015262434d4f60e81b604082015260600190565b60405160200161018b90602080825260039082015262434f4f60e81b604082015260600190565b60405160200161018b9060208082526007908201526620a22b24a9a7a960c91b604082015260600190565b60405160200161018b9060208082526003908201526243464f60e81b604082015260600190565b60606040516020016102bf9060208082526003908201526243454f60e81b604082015260600190565b604051602081830303815290604052805190602001208214156102fb57505060408051808201909152600381526243454f60e81b602082015290565b6040516020016103229060208082526003908201526243464f60e81b604082015260600190565b6040516020818303038152906040528051906020012082141561035e57505060408051808201909152600381526243464f60e81b602082015290565b6040516020016103859060208082526003908201526243544f60e81b604082015260600190565b604051602081830303815290604052805190602001208214156103c157505060408051808201909152600381526243544f60e81b602082015290565b6040516020016103e890602080825260039082015262434f4f60e81b604082015260600190565b60405160208183030381529060405280519060200120821415610424575050604080518082019091526003815262434f4f60e81b602082015290565b60405160200161044b90602080825260039082015262434d4f60e81b604082015260600190565b60405160208183030381529060405280519060200120821415610487575050604080518082019091526003815262434d4f60e81b602082015290565b6040516020016104b29060208082526007908201526620a22b24a9a7a960c91b604082015260600190565b604051602081830303815290604052805190602001208214156104f257505060408051808201909152600781526620a22b24a9a7a960c91b602082015290565b60405160200161051d906020808252600790820152662820a92a2722a960c91b604082015260600190565b6040516020818303038152906040528051906020012082141561055d5750506040805180820190915260078152662820a92a2722a960c91b602082015290565b505060408051602081019091526000815290565b634e487b7160e01b600052604160045260246000fd5b80356001600160a01b038116811461059e57600080fd5b919050565b6000806000606084860312156105b857600080fd5b833567ffffffffffffffff808211156105d057600080fd5b818601915086601f8301126105e457600080fd5b8135818111156105f6576105f6610571565b604051601f8201601f19908116603f0116810190838211818310171561061e5761061e610571565b8160405282815289602084870101111561063757600080fd5b8260208601602083013760006020848301015280975050505050506020840135915061066560408501610587565b90509250925092565b6000815180845260005b8181101561069457602081850181015186830182015201610678565b818111156106a6576000602083870101525b50601f01601f19169290920160200192915050565b6020815260008251606060208401526106d7608084018261066e565b6020850151604085810191909152909401516001600160a01b03166060909301929092525090919050565b60006020828403121561071457600080fd5b5035919050565b60208152600061072e602083018461066e565b939250505056fea2646970667358221220929e05a2c1f6c38e61b96302c10424028c37955456d7e86f2b05c2d1ec21ce4b64736f6c63430008090033",
+    "sourceMap": "57:1291:16:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;57:1291:16;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x730000000000000000000000000000000000000000301460806040526004361061009d5760003560e01c8063b91c6c2611610070578063b91c6c2614610124578063bac9dbab1461012c578063d1f8a4c114610134578063e23f2a1d1461013c578063fb76a5a71461014457600080fd5b80632a051f00146100a257806342898745146100bd57806364155547146101145780637708ea1d1461011c575b600080fd5b6100aa610164565b6040519081526020015b60405180910390f35b6101076100cb3660046105a3565b60408051606080820183528082526000602080840182905292840152825190810183529485528401929092526001600160a01b03169082015290565b6040516100b491906106bb565b6100aa6101a4565b6100aa6101cf565b6100aa6101f6565b6100aa61021d565b6100aa610244565b6100aa61026f565b610157610152366004610702565b610296565b6040516100b4919061071b565b60405160200161018b9060208082526003908201526243544f60e81b604082015260600190565b6040516020818303038152906040528051906020012081565b60405160200161018b906020808252600790820152662820a92a2722a960c91b604082015260600190565b60405160200161018b9060208082526003908201526243454f60e81b604082015260600190565b60405160200161018b90602080825260039082015262434d4f60e81b604082015260600190565b60405160200161018b90602080825260039082015262434f4f60e81b604082015260600190565b60405160200161018b9060208082526007908201526620a22b24a9a7a960c91b604082015260600190565b60405160200161018b9060208082526003908201526243464f60e81b604082015260600190565b60606040516020016102bf9060208082526003908201526243454f60e81b604082015260600190565b604051602081830303815290604052805190602001208214156102fb57505060408051808201909152600381526243454f60e81b602082015290565b6040516020016103229060208082526003908201526243464f60e81b604082015260600190565b6040516020818303038152906040528051906020012082141561035e57505060408051808201909152600381526243464f60e81b602082015290565b6040516020016103859060208082526003908201526243544f60e81b604082015260600190565b604051602081830303815290604052805190602001208214156103c157505060408051808201909152600381526243544f60e81b602082015290565b6040516020016103e890602080825260039082015262434f4f60e81b604082015260600190565b60405160208183030381529060405280519060200120821415610424575050604080518082019091526003815262434f4f60e81b602082015290565b60405160200161044b90602080825260039082015262434d4f60e81b604082015260600190565b60405160208183030381529060405280519060200120821415610487575050604080518082019091526003815262434d4f60e81b602082015290565b6040516020016104b29060208082526007908201526620a22b24a9a7a960c91b604082015260600190565b604051602081830303815290604052805190602001208214156104f257505060408051808201909152600781526620a22b24a9a7a960c91b602082015290565b60405160200161051d906020808252600790820152662820a92a2722a960c91b604082015260600190565b6040516020818303038152906040528051906020012082141561055d5750506040805180820190915260078152662820a92a2722a960c91b602082015290565b505060408051602081019091526000815290565b634e487b7160e01b600052604160045260246000fd5b80356001600160a01b038116811461059e57600080fd5b919050565b6000806000606084860312156105b857600080fd5b833567ffffffffffffffff808211156105d057600080fd5b818601915086601f8301126105e457600080fd5b8135818111156105f6576105f6610571565b604051601f8201601f19908116603f0116810190838211818310171561061e5761061e610571565b8160405282815289602084870101111561063757600080fd5b8260208601602083013760006020848301015280975050505050506020840135915061066560408501610587565b90509250925092565b6000815180845260005b8181101561069457602081850181015186830182015201610678565b818111156106a6576000602083870101525b50601f01601f19169290920160200192915050565b6020815260008251606060208401526106d7608084018261066e565b6020850151604085810191909152909401516001600160a01b03166060909301929092525090919050565b60006020828403121561071457600080fd5b5035919050565b60208152600061072e602083018461066e565b939250505056fea2646970667358221220929e05a2c1f6c38e61b96302c10424028c37955456d7e86f2b05c2d1ec21ce4b64736f6c63430008090033",
+    "sourceMap": "57:1291:16:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;220:63;;;:::i;:::-;;;168:25:103;;;156:2;141:18;220:63:16;;;;;;;;682:242;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;816:101:16;;;;;;;;;;;;;;;;-1:-1:-1;;;;;816:101:16;;;;;;682:242;;;;;;;;:::i;504:71::-;;;:::i;82:63::-;;;:::i;358:::-;;;:::i;289:::-;;;:::i;427:71::-;;;:::i;151:63::-;;;:::i;930:415::-;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;220:63::-;265:17;;;;;;3226:2:103;3208:21;;;3265:1;3245:18;;;3238:29;-1:-1:-1;;;3298:2:103;3283:18;;3276:33;3341:2;3326:18;;3024:326;265:17:16;;;;;;;;;;;;;255:28;;;;;;220:63;:::o;504:71::-;553:21;;;;;;3557:2:103;3539:21;;;3596:1;3576:18;;;3569:29;-1:-1:-1;;;3629:2:103;3614:18;;3607:37;3676:2;3661:18;;3355:330;82:63:16;127:17;;;;;;3892:2:103;3874:21;;;3931:1;3911:18;;;3904:29;-1:-1:-1;;;3964:2:103;3949:18;;3942:33;4007:2;3992:18;;3690:326;358:63:16;403:17;;;;;;4223:2:103;4205:21;;;4262:1;4242:18;;;4235:29;-1:-1:-1;;;4295:2:103;4280:18;;4273:33;4338:2;4323:18;;4021:326;289:63:16;334:17;;;;;;4554:2:103;4536:21;;;4593:1;4573:18;;;4566:29;-1:-1:-1;;;4626:2:103;4611:18;;4604:33;4669:2;4654:18;;4352:326;427:71:16;476:21;;;;;;4885:2:103;4867:21;;;4924:1;4904:18;;;4897:29;-1:-1:-1;;;4957:2:103;4942:18;;4935:37;5004:2;4989:18;;4683:330;151:63:16;196:17;;;;;;5220:2:103;5202:21;;;5259:1;5239:18;;;5232:29;-1:-1:-1;;;5292:2:103;5277:18;;5270:33;5335:2;5320:18;;5018:326;930:415:16;988:13;127:17;;;;;;3892:2:103;3874:21;;;3931:1;3911:18;;;3904:29;-1:-1:-1;;;3964:2:103;3949:18;;3942:33;4007:2;3992:18;;3690:326;127:17:16;;;;;;;;;;;;;117:28;;;;;;1016:4;:16;1013:33;;;-1:-1:-1;;1034:12:16;;;;;;;;;;;;-1:-1:-1;;;1034:12:16;;;;;930:415::o;1013:33::-;196:17;;;;;;5220:2:103;5202:21;;;5259:1;5239:18;;;5232:29;-1:-1:-1;;;5292:2:103;5277:18;;5270:33;5335:2;5320:18;;5018:326;196:17:16;;;;;;;;;;;;;186:28;;;;;;1059:4;:16;1056:33;;;-1:-1:-1;;1077:12:16;;;;;;;;;;;;-1:-1:-1;;;1077:12:16;;;;;930:415::o;1056:33::-;265:17;;;;;;3226:2:103;3208:21;;;3265:1;3245:18;;;3238:29;-1:-1:-1;;;3298:2:103;3283:18;;3276:33;3341:2;3326:18;;3024:326;265:17:16;;;;;;;;;;;;;255:28;;;;;;1102:4;:16;1099:33;;;-1:-1:-1;;1120:12:16;;;;;;;;;;;;-1:-1:-1;;;1120:12:16;;;;;930:415::o;1099:33::-;334:17;;;;;;4554:2:103;4536:21;;;4593:1;4573:18;;;4566:29;-1:-1:-1;;;4626:2:103;4611:18;;4604:33;4669:2;4654:18;;4352:326;334:17:16;;;;;;;;;;;;;324:28;;;;;;1145:4;:16;1142:33;;;-1:-1:-1;;1163:12:16;;;;;;;;;;;;-1:-1:-1;;;1163:12:16;;;;;930:415::o;1142:33::-;403:17;;;;;;4223:2:103;4205:21;;;4262:1;4242:18;;;4235:29;-1:-1:-1;;;4295:2:103;4280:18;;4273:33;4338:2;4323:18;;4021:326;403:17:16;;;;;;;;;;;;;393:28;;;;;;1188:4;:16;1185:33;;;-1:-1:-1;;1206:12:16;;;;;;;;;;;;-1:-1:-1;;;1206:12:16;;;;;930:415::o;1185:33::-;476:21;;;;;;4885:2:103;4867:21;;;4924:1;4904:18;;;4897:29;-1:-1:-1;;;4957:2:103;4942:18;;4935:37;5004:2;4989:18;;4683:330;476:21:16;;;;;;;;;;;;;466:32;;;;;;1231:4;:20;1228:41;;;-1:-1:-1;;1253:16:16;;;;;;;;;;;;-1:-1:-1;;;1253:16:16;;;;;930:415::o;1228:41::-;553:21;;;;;;3557:2:103;3539:21;;;3596:1;3576:18;;;3569:29;-1:-1:-1;;;3629:2:103;3614:18;;3607:37;3676:2;3661:18;;3355:330;553:21:16;;;;;;;;;;;;;543:32;;;;;;1282:4;:20;1279:41;;;-1:-1:-1;;1304:16:16;;;;;;;;;;;;-1:-1:-1;;;1304:16:16;;;;;930:415::o;1279:41::-;-1:-1:-1;;1329:9:16;;;;;;;;;-1:-1:-1;1329:9:16;;;930:415::o;204:127:103:-;265:10;260:3;256:20;253:1;246:31;296:4;293:1;286:15;320:4;317:1;310:15;336:173;404:20;;-1:-1:-1;;;;;453:31:103;;443:42;;433:70;;499:1;496;489:12;433:70;336:173;;;:::o;514:1074::-;601:6;609;617;670:2;658:9;649:7;645:23;641:32;638:52;;;686:1;683;676:12;638:52;726:9;713:23;755:18;796:2;788:6;785:14;782:34;;;812:1;809;802:12;782:34;850:6;839:9;835:22;825:32;;895:7;888:4;884:2;880:13;876:27;866:55;;917:1;914;907:12;866:55;953:2;940:16;975:2;971;968:10;965:36;;;981:18;;:::i;:::-;1056:2;1050:9;1024:2;1110:13;;-1:-1:-1;;1106:22:103;;;1130:2;1102:31;1098:40;1086:53;;;1154:18;;;1174:22;;;1151:46;1148:72;;;1200:18;;:::i;:::-;1240:10;1236:2;1229:22;1275:2;1267:6;1260:18;1317:7;1310:4;1305:2;1301;1297:11;1293:22;1290:35;1287:55;;;1338:1;1335;1328:12;1287:55;1398:2;1391:4;1387:2;1383:13;1376:4;1368:6;1364:17;1351:50;1445:1;1438:4;1433:2;1425:6;1421:15;1417:26;1410:37;1466:6;1456:16;;;;;;;1519:4;1508:9;1504:20;1491:34;1481:44;;1544:38;1578:2;1567:9;1563:18;1544:38;:::i;:::-;1534:48;;514:1074;;;;;:::o;1593:472::-;1635:3;1673:5;1667:12;1700:6;1695:3;1688:19;1725:1;1735:162;1749:6;1746:1;1743:13;1735:162;;;1811:4;1867:13;;;1863:22;;1857:29;1839:11;;;1835:20;;1828:59;1764:12;1735:162;;;1915:6;1912:1;1909:13;1906:87;;;1981:1;1974:4;1965:6;1960:3;1956:16;1952:27;1945:38;1906:87;-1:-1:-1;2047:2:103;2026:15;-1:-1:-1;;2022:29:103;2013:39;;;;2054:4;2009:50;;1593:472;-1:-1:-1;;1593:472:103:o;2070:531::-;2265:2;2254:9;2247:21;2228:4;2303:6;2297:13;2346:4;2341:2;2330:9;2326:18;2319:32;2374:52;2421:3;2410:9;2406:19;2392:12;2374:52;:::i;:::-;2480:2;2468:15;;2462:22;2457:2;2442:18;;;2435:50;;;;2533:15;;;2527:22;-1:-1:-1;;;;;2523:48:103;2516:4;2501:20;;;2494:78;;;;-1:-1:-1;2360:66:103;;2070:531;-1:-1:-1;2070:531:103:o;2606:180::-;2665:6;2718:2;2706:9;2697:7;2693:23;2689:32;2686:52;;;2734:1;2731;2724:12;2686:52;-1:-1:-1;2757:23:103;;2606:180;-1:-1:-1;2606:180:103:o;2791:228::-;2948:2;2937:9;2930:21;2911:4;2968:45;3009:2;2998:9;2994:18;2986:6;2968:45;:::i;:::-;2960:53;2791:228;-1:-1:-1;;;2791:228:103:o",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Libraries/Founders.sol",
+    "id": 1845,
+    "exportedSymbols": {
+      "Founders": [
+        1844
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1316:16",
+    "nodes": [
+      {
+        "id": 1709,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:16",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 1844,
+        "nodeType": "ContractDefinition",
+        "src": "57:1291:16",
+        "nodes": [
+          {
+            "id": 1717,
+            "nodeType": "VariableDeclaration",
+            "src": "82:63:16",
+            "constant": true,
+            "functionSelector": "7708ea1d",
+            "mutability": "constant",
+            "name": "ROLE_CEO",
+            "nameLocation": "106:8:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1710,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "82:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "43454f",
+                      "id": 1714,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "138:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_dc0d7a095c4e917ecbeb7deda7c942ff9744013d419e37549215a413915e421d",
+                        "typeString": "literal_string \"CEO\""
+                      },
+                      "value": "CEO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_dc0d7a095c4e917ecbeb7deda7c942ff9744013d419e37549215a413915e421d",
+                        "typeString": "literal_string \"CEO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1712,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "127:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1713,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "127:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1715,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "127:17:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1711,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "117:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1716,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "117:28:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1725,
+            "nodeType": "VariableDeclaration",
+            "src": "151:63:16",
+            "constant": true,
+            "functionSelector": "e23f2a1d",
+            "mutability": "constant",
+            "name": "ROLE_CFO",
+            "nameLocation": "175:8:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1718,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "43464f",
+                      "id": 1722,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "207:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_33fa24d9aab6b79237248a16094d5f78ea83bb51e42c123ce925a264e7d816cc",
+                        "typeString": "literal_string \"CFO\""
+                      },
+                      "value": "CFO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_33fa24d9aab6b79237248a16094d5f78ea83bb51e42c123ce925a264e7d816cc",
+                        "typeString": "literal_string \"CFO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1720,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "196:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1721,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "196:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1723,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "196:17:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1719,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "186:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1724,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "186:28:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1733,
+            "nodeType": "VariableDeclaration",
+            "src": "220:63:16",
+            "constant": true,
+            "functionSelector": "2a051f00",
+            "mutability": "constant",
+            "name": "ROLE_CTO",
+            "nameLocation": "244:8:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1726,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "220:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "43544f",
+                      "id": 1730,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "276:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_f5562c8b4b9dcf5083521725556cccf96ad230969b26cc8a145f067d5ab9ac83",
+                        "typeString": "literal_string \"CTO\""
+                      },
+                      "value": "CTO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_f5562c8b4b9dcf5083521725556cccf96ad230969b26cc8a145f067d5ab9ac83",
+                        "typeString": "literal_string \"CTO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1728,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "265:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1729,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "265:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1731,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "265:17:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1727,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "255:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1732,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "255:28:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1741,
+            "nodeType": "VariableDeclaration",
+            "src": "289:63:16",
+            "constant": true,
+            "functionSelector": "bac9dbab",
+            "mutability": "constant",
+            "name": "ROLE_COO",
+            "nameLocation": "313:8:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1734,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "289:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "434f4f",
+                      "id": 1738,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "345:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_efa080c67ecf4a6bf40c9dc64173420c08f359250ca6562d7c80f7c7b9b13969",
+                        "typeString": "literal_string \"COO\""
+                      },
+                      "value": "COO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_efa080c67ecf4a6bf40c9dc64173420c08f359250ca6562d7c80f7c7b9b13969",
+                        "typeString": "literal_string \"COO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1736,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "334:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1737,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "334:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1739,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "334:17:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1735,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "324:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1740,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "324:28:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1749,
+            "nodeType": "VariableDeclaration",
+            "src": "358:63:16",
+            "constant": true,
+            "functionSelector": "b91c6c26",
+            "mutability": "constant",
+            "name": "ROLE_CMO",
+            "nameLocation": "382:8:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1742,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "358:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "434d4f",
+                      "id": 1746,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "414:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_7da108d7a5eb4620176510755219c2c666518e777605d1790c87785200093188",
+                        "typeString": "literal_string \"CMO\""
+                      },
+                      "value": "CMO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_7da108d7a5eb4620176510755219c2c666518e777605d1790c87785200093188",
+                        "typeString": "literal_string \"CMO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1744,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "403:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1745,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "403:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1747,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "403:17:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1743,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "393:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1748,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "393:28:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1757,
+            "nodeType": "VariableDeclaration",
+            "src": "427:71:16",
+            "constant": true,
+            "functionSelector": "d1f8a4c1",
+            "mutability": "constant",
+            "name": "ROLE_ADVISOR",
+            "nameLocation": "451:12:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1750,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "427:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "41445649534f52",
+                      "id": 1754,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "487:9:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_7977b0dd767f6e4f9acb903650fe437e0d0ebc1dfbb16d0da90a8c92f15b0c3a",
+                        "typeString": "literal_string \"ADVISOR\""
+                      },
+                      "value": "ADVISOR"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_7977b0dd767f6e4f9acb903650fe437e0d0ebc1dfbb16d0da90a8c92f15b0c3a",
+                        "typeString": "literal_string \"ADVISOR\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1752,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "476:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1753,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "476:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1755,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "476:21:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1751,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "466:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1756,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "466:32:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1765,
+            "nodeType": "VariableDeclaration",
+            "src": "504:71:16",
+            "constant": true,
+            "functionSelector": "64155547",
+            "mutability": "constant",
+            "name": "ROLE_PARTNER",
+            "nameLocation": "528:12:16",
+            "scope": 1844,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1758,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "504:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "504152544e4552",
+                      "id": 1762,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "564:9:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_58edb4ecb5286cf3567882e35263b240c6a50a69b20e370d9bff27b56c1a1ce4",
+                        "typeString": "literal_string \"PARTNER\""
+                      },
+                      "value": "PARTNER"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_58edb4ecb5286cf3567882e35263b240c6a50a69b20e370d9bff27b56c1a1ce4",
+                        "typeString": "literal_string \"PARTNER\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1760,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "553:3:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1761,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "553:10:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1763,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "553:21:16",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1759,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "543:9:16",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1764,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "543:32:16",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1772,
+            "nodeType": "StructDefinition",
+            "src": "582:94:16",
+            "canonicalName": "Founders.founderData",
+            "members": [
+              {
+                "constant": false,
+                "id": 1767,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "618:4:16",
+                "nodeType": "VariableDeclaration",
+                "scope": 1772,
+                "src": "611:11:16",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1766,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "611:6:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1769,
+                "mutability": "mutable",
+                "name": "roles",
+                "nameLocation": "640:5:16",
+                "nodeType": "VariableDeclaration",
+                "scope": 1772,
+                "src": "632:13:16",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1768,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "632:7:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1771,
+                "mutability": "mutable",
+                "name": "wallet",
+                "nameLocation": "663:6:16",
+                "nodeType": "VariableDeclaration",
+                "scope": 1772,
+                "src": "655:14:16",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1770,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:7:16",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "founderData",
+            "nameLocation": "589:11:16",
+            "scope": 1844,
+            "visibility": "public"
+          },
+          {
+            "id": 1791,
+            "nodeType": "FunctionDefinition",
+            "src": "682:242:16",
+            "body": {
+              "id": 1790,
+              "nodeType": "Block",
+              "src": "799:125:16",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 1785,
+                        "name": "name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1774,
+                        "src": "848:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 1786,
+                        "name": "roles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1776,
+                        "src": "873:5:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 1787,
+                        "name": "wallet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1778,
+                        "src": "900:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1784,
+                      "name": "founderData",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1772,
+                      "src": "816:11:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_founderData_$1772_storage_ptr_$",
+                        "typeString": "type(struct Founders.founderData storage pointer)"
+                      }
+                    },
+                    "id": 1788,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "name",
+                      "roles",
+                      "wallet"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "816:101:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_founderData_$1772_memory_ptr",
+                      "typeString": "struct Founders.founderData memory"
+                    }
+                  },
+                  "functionReturnParameters": 1783,
+                  "id": 1789,
+                  "nodeType": "Return",
+                  "src": "809:108:16"
+                }
+              ]
+            },
+            "functionSelector": "42898745",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_createFounder",
+            "nameLocation": "691:14:16",
+            "parameters": {
+              "id": 1779,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1774,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "720:4:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1791,
+                  "src": "706:18:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1773,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "706:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1776,
+                  "mutability": "mutable",
+                  "name": "roles",
+                  "nameLocation": "735:5:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1791,
+                  "src": "726:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1775,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "726:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1778,
+                  "mutability": "mutable",
+                  "name": "wallet",
+                  "nameLocation": "750:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1791,
+                  "src": "742:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1777,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "742:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "705:52:16"
+            },
+            "returnParameters": {
+              "id": 1783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1782,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1791,
+                  "src": "779:18:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_founderData_$1772_memory_ptr",
+                    "typeString": "struct Founders.founderData"
+                  },
+                  "typeName": {
+                    "id": 1781,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1780,
+                      "name": "founderData",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1772,
+                      "src": "779:11:16"
+                    },
+                    "referencedDeclaration": 1772,
+                    "src": "779:11:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_founderData_$1772_storage_ptr",
+                      "typeString": "struct Founders.founderData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "778:20:16"
+            },
+            "scope": 1844,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 1843,
+            "nodeType": "FunctionDefinition",
+            "src": "930:415:16",
+            "body": {
+              "id": 1842,
+              "nodeType": "Block",
+              "src": "1003:342:16",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1800,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1798,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1016:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1799,
+                      "name": "ROLE_CEO",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1717,
+                      "src": "1024:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1016:16:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1803,
+                  "nodeType": "IfStatement",
+                  "src": "1013:33:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "43454f",
+                      "id": 1801,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1041:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_dc0d7a095c4e917ecbeb7deda7c942ff9744013d419e37549215a413915e421d",
+                        "typeString": "literal_string \"CEO\""
+                      },
+                      "value": "CEO"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1802,
+                    "nodeType": "Return",
+                    "src": "1034:12:16"
+                  }
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1806,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1804,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1059:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1805,
+                      "name": "ROLE_CFO",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1725,
+                      "src": "1067:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1059:16:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1809,
+                  "nodeType": "IfStatement",
+                  "src": "1056:33:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "43464f",
+                      "id": 1807,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1084:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_33fa24d9aab6b79237248a16094d5f78ea83bb51e42c123ce925a264e7d816cc",
+                        "typeString": "literal_string \"CFO\""
+                      },
+                      "value": "CFO"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1808,
+                    "nodeType": "Return",
+                    "src": "1077:12:16"
+                  }
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1812,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1810,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1102:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1811,
+                      "name": "ROLE_CTO",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1733,
+                      "src": "1110:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1102:16:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1815,
+                  "nodeType": "IfStatement",
+                  "src": "1099:33:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "43544f",
+                      "id": 1813,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1127:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_f5562c8b4b9dcf5083521725556cccf96ad230969b26cc8a145f067d5ab9ac83",
+                        "typeString": "literal_string \"CTO\""
+                      },
+                      "value": "CTO"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1814,
+                    "nodeType": "Return",
+                    "src": "1120:12:16"
+                  }
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1818,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1816,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1145:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1817,
+                      "name": "ROLE_COO",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1741,
+                      "src": "1153:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1145:16:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1821,
+                  "nodeType": "IfStatement",
+                  "src": "1142:33:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "434f4f",
+                      "id": 1819,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1170:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_efa080c67ecf4a6bf40c9dc64173420c08f359250ca6562d7c80f7c7b9b13969",
+                        "typeString": "literal_string \"COO\""
+                      },
+                      "value": "COO"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1820,
+                    "nodeType": "Return",
+                    "src": "1163:12:16"
+                  }
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1824,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1822,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1188:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1823,
+                      "name": "ROLE_CMO",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1749,
+                      "src": "1196:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1188:16:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1827,
+                  "nodeType": "IfStatement",
+                  "src": "1185:33:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "434d4f",
+                      "id": 1825,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1213:5:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_7da108d7a5eb4620176510755219c2c666518e777605d1790c87785200093188",
+                        "typeString": "literal_string \"CMO\""
+                      },
+                      "value": "CMO"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1826,
+                    "nodeType": "Return",
+                    "src": "1206:12:16"
+                  }
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1830,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1828,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1231:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1829,
+                      "name": "ROLE_ADVISOR",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1757,
+                      "src": "1239:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1231:20:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1833,
+                  "nodeType": "IfStatement",
+                  "src": "1228:41:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "41445649534f52",
+                      "id": 1831,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1260:9:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_7977b0dd767f6e4f9acb903650fe437e0d0ebc1dfbb16d0da90a8c92f15b0c3a",
+                        "typeString": "literal_string \"ADVISOR\""
+                      },
+                      "value": "ADVISOR"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1832,
+                    "nodeType": "Return",
+                    "src": "1253:16:16"
+                  }
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 1836,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1834,
+                      "name": "role",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1793,
+                      "src": "1282:4:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 1835,
+                      "name": "ROLE_PARTNER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1765,
+                      "src": "1290:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1282:20:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1839,
+                  "nodeType": "IfStatement",
+                  "src": "1279:41:16",
+                  "trueBody": {
+                    "expression": {
+                      "hexValue": "504152544e4552",
+                      "id": 1837,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1311:9:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_58edb4ecb5286cf3567882e35263b240c6a50a69b20e370d9bff27b56c1a1ce4",
+                        "typeString": "literal_string \"PARTNER\""
+                      },
+                      "value": "PARTNER"
+                    },
+                    "functionReturnParameters": 1797,
+                    "id": 1838,
+                    "nodeType": "Return",
+                    "src": "1304:16:16"
+                  }
+                },
+                {
+                  "expression": {
+                    "hexValue": "",
+                    "id": 1840,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1336:2:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                      "typeString": "literal_string \"\""
+                    },
+                    "value": ""
+                  },
+                  "functionReturnParameters": 1797,
+                  "id": 1841,
+                  "nodeType": "Return",
+                  "src": "1329:9:16"
+                }
+              ]
+            },
+            "functionSelector": "fb76a5a7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_roleToString",
+            "nameLocation": "939:13:16",
+            "parameters": {
+              "id": 1794,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1793,
+                  "mutability": "mutable",
+                  "name": "role",
+                  "nameLocation": "961:4:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1843,
+                  "src": "953:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1792,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "953:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "952:14:16"
+            },
+            "returnParameters": {
+              "id": 1797,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1796,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1843,
+                  "src": "988:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1795,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "988:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "987:15:16"
+            },
+            "scope": 1844,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Founders",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1844
+        ],
+        "name": "Founders",
+        "nameLocation": "65:8:16",
+        "scope": 1845,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  }
+}

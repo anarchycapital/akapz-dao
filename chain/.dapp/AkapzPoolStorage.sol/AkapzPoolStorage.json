@@ -1,0 +1,409 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "pools",
+      "outputs": [
+        {
+          "internalType": "contract IUniswapV2Pair",
+          "name": "lpToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "allocPoint",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastRewardBlock",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "accPerShare",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "stakeDatas",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IUniswapV2Pair",
+          "name": "lpToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stakedLPTokenAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startBlock",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shareOfPool",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "allocPoint",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastRewardBlock",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "accPerShare",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "stakers",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rewardDebt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "blockTs",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610232806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80637c33cc23146100465780639168ae72146100f1578063a4063dbc1461013e575b600080fd5b6100a66100543660046101a9565b6002602081905260009182526040909120805460018201549282015460038301546004840154600585015460068601546007909601546001600160a01b03958616979095169593949293919290919088565b604080516001600160a01b03998a168152989097166020890152958701949094526060860192909252608085015260a084015260c083015260e0820152610100015b60405180910390f35b6101236100ff3660046101d3565b60006020819052908152604090206001810154600282015460039092015490919083565b604080519384526020840192909252908201526060016100e8565b61017f61014c3660046101d3565b600360208190526000918252604090912080546001820154600283015492909301546001600160a01b0390911692919084565b604080516001600160a01b03909516855260208501939093529183015260608201526080016100e8565b6000602082840312156101bb57600080fd5b813560ff811681146101cc57600080fd5b9392505050565b6000602082840312156101e557600080fd5b81356001600160a01b03811681146101cc57600080fdfea2646970667358221220f1854bb6c94bd46a441a29616ffb9a8b4bcf52e6a9083d219aae8bc09194410264736f6c63430008090033",
+    "sourceMap": "90:283:21:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80637c33cc23146100465780639168ae72146100f1578063a4063dbc1461013e575b600080fd5b6100a66100543660046101a9565b6002602081905260009182526040909120805460018201549282015460038301546004840154600585015460068601546007909601546001600160a01b03958616979095169593949293919290919088565b604080516001600160a01b03998a168152989097166020890152958701949094526060860192909252608085015260a084015260c083015260e0820152610100015b60405180910390f35b6101236100ff3660046101d3565b60006020819052908152604090206001810154600282015460039092015490919083565b604080519384526020840192909252908201526060016100e8565b61017f61014c3660046101d3565b600360208190526000918252604090912080546001820154600283015492909301546001600160a01b0390911692919084565b604080516001600160a01b03909516855260208501939093529183015260608201526080016100e8565b6000602082840312156101bb57600080fd5b813560ff811681146101cc57600080fd5b9392505050565b6000602082840312156101e557600080fd5b81356001600160a01b03811681146101cc57600080fdfea2646970667358221220f1854bb6c94bd46a441a29616ffb9a8b4bcf52e6a9083d219aae8bc09194410264736f6c63430008090033",
+    "sourceMap": "90:283:21:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;240:45;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;240:45:21;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;711:15:103;;;693:34;;763:15;;;;758:2;743:18;;736:43;795:18;;;788:34;;;;853:2;838:18;;831:34;;;;896:3;881:19;;874:35;673:3;925:19;;918:35;984:3;969:19;;962:35;1028:3;1013:19;;1006:35;642:3;627:19;240:45:21;;;;;;;;142:42;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1545:25:103;;;1601:2;1586:18;;1579:34;;;;1629:18;;;1622:34;1533:2;1518:18;142:42:21;1343:319:103;308:37:21;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;308:37:21;;;;;;;;;;;;-1:-1:-1;;;;;1940:32:103;;;1922:51;;2004:2;1989:18;;1982:34;;;;2032:18;;;2025:34;2090:2;2075:18;;2068:34;1909:3;1894:19;308:37:21;1667:441:103;14:269;71:6;124:2;112:9;103:7;99:23;95:32;92:52;;;140:1;137;130:12;92:52;179:9;166:23;229:4;222:5;218:16;211:5;208:27;198:55;;249:1;246;239:12;198:55;272:5;14:269;-1:-1:-1;;;14:269:103:o;1052:286::-;1111:6;1164:2;1152:9;1143:7;1139:23;1135:32;1132:52;;;1180:1;1177;1170:12;1132:52;1206:23;;-1:-1:-1;;;;;1258:31:103;;1248:42;;1238:70;;1304:1;1301;1294:12",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Pools/AkapzPoolStorage.sol",
+    "id": 2489,
+    "exportedSymbols": {
+      "AkapzPoolObjects": [
+        2464
+      ],
+      "AkapzPoolStorage": [
+        2488
+      ],
+      "IERC20": [
+        14022
+      ],
+      "IUniswapV2Pair": [
+        19795
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:341:21",
+    "nodes": [
+      {
+        "id": 2466,
+        "nodeType": "PragmaDirective",
+        "src": "32:22:21",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 2467,
+        "nodeType": "ImportDirective",
+        "src": "56:32:21",
+        "absolutePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Pools/AkapzPoolObjects.sol",
+        "file": "./AkapzPoolObjects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2489,
+        "sourceUnit": 2465,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 2488,
+        "nodeType": "ContractDefinition",
+        "src": "90:283:21",
+        "nodes": [
+          {
+            "id": 2474,
+            "nodeType": "VariableDeclaration",
+            "src": "142:42:21",
+            "constant": false,
+            "functionSelector": "9168ae72",
+            "mutability": "mutable",
+            "name": "stakers",
+            "nameLocation": "177:7:21",
+            "scope": 2488,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Staker_$2435_storage_$",
+              "typeString": "mapping(address => struct AkapzPoolObjects.Staker)"
+            },
+            "typeName": {
+              "id": 2473,
+              "keyType": {
+                "id": 2470,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "151:7:21",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "142:27:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Staker_$2435_storage_$",
+                "typeString": "mapping(address => struct AkapzPoolObjects.Staker)"
+              },
+              "valueType": {
+                "id": 2472,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 2471,
+                  "name": "Staker",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2435,
+                  "src": "162:6:21"
+                },
+                "referencedDeclaration": 2435,
+                "src": "162:6:21",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Staker_$2435_storage_ptr",
+                  "typeString": "struct AkapzPoolObjects.Staker"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 2477,
+            "nodeType": "VariableDeclaration",
+            "src": "212:21:21",
+            "constant": false,
+            "mutability": "mutable",
+            "name": "stakersList",
+            "nameLocation": "222:11:21",
+            "scope": 2488,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2475,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "212:7:21",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 2476,
+              "nodeType": "ArrayTypeName",
+              "src": "212:9:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 2482,
+            "nodeType": "VariableDeclaration",
+            "src": "240:45:21",
+            "constant": false,
+            "functionSelector": "7c33cc23",
+            "mutability": "mutable",
+            "name": "stakeDatas",
+            "nameLocation": "275:10:21",
+            "scope": 2488,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_StakeData_$2453_storage_$",
+              "typeString": "mapping(uint8 => struct AkapzPoolObjects.StakeData)"
+            },
+            "typeName": {
+              "id": 2481,
+              "keyType": {
+                "id": 2478,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "248:5:21",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "240:27:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint8_$_t_struct$_StakeData_$2453_storage_$",
+                "typeString": "mapping(uint8 => struct AkapzPoolObjects.StakeData)"
+              },
+              "valueType": {
+                "id": 2480,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 2479,
+                  "name": "StakeData",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2453,
+                  "src": "257:9:21"
+                },
+                "referencedDeclaration": 2453,
+                "src": "257:9:21",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_StakeData_$2453_storage_ptr",
+                  "typeString": "struct AkapzPoolObjects.StakeData"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 2487,
+            "nodeType": "VariableDeclaration",
+            "src": "308:37:21",
+            "constant": false,
+            "functionSelector": "a4063dbc",
+            "mutability": "mutable",
+            "name": "pools",
+            "nameLocation": "340:5:21",
+            "scope": 2488,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Pool_$2463_storage_$",
+              "typeString": "mapping(address => struct AkapzPoolObjects.Pool)"
+            },
+            "typeName": {
+              "id": 2486,
+              "keyType": {
+                "id": 2483,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "316:7:21",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "308:24:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Pool_$2463_storage_$",
+                "typeString": "mapping(address => struct AkapzPoolObjects.Pool)"
+              },
+              "valueType": {
+                "id": 2485,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 2484,
+                  "name": "Pool",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2463,
+                  "src": "327:4:21"
+                },
+                "referencedDeclaration": 2463,
+                "src": "327:4:21",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Pool_$2463_storage_ptr",
+                  "typeString": "struct AkapzPoolObjects.Pool"
+                }
+              }
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2468,
+              "name": "AkapzPoolObjects",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2464,
+              "src": "119:16:21"
+            },
+            "id": 2469,
+            "nodeType": "InheritanceSpecifier",
+            "src": "119:16:21"
+          }
+        ],
+        "canonicalName": "AkapzPoolStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          2488,
+          2464
+        ],
+        "name": "AkapzPoolStorage",
+        "nameLocation": "99:16:21",
+        "scope": 2489,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  }
+}

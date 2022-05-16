@@ -1,0 +1,2237 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_FREEBIE_IMAGE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_FREEBIE_STREAM",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_FREEBIE_VIDEO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_IMAGE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_PPMS",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_PPVS",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MEDIA_TYPE_VIDEO",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "mimeType",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "size",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "heightPx",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "widthPx",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "_censoredIfNotPurchased",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "_isNSFW",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_description",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_expiry",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Media.ImageDetails",
+          "name": "_image",
+          "type": "tuple"
+        }
+      ],
+      "name": "newImage",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "mimeType",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "size",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "heightPx",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "widthPx",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "_censoredIfNotPurchased",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "_isNSFW",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_description",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_expiry",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Media.ImageDetails",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6105be61003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100925760003560e01c80636748031c116100655780636748031c146100e657806381aebef8146100ee578063c840950e146100c0578063f7af1423146100f657600080fd5b8063098d8f811461009757806310169a2b146100c057806314e1ec4c146100d65780631a462ed9146100de575b600080fd5b6100aa6100a53660046103c9565b6100fe565b6040516100b79190610459565b60405180910390f35b6100c86102a2565b6040519081526020016100b7565b6100c86102e3565b6100c861030c565b6100c861033d565b6100c861036f565b6100c8610398565b61015860405180610140016040528060608152602001600081526020016000815260200160008152602001600015158152602001600015158152602001606081526020016060815260200160008152602001600081525090565b6040805161014081019091528061016f8480610518565b8080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152505050908252506020848101359082015260408085013590820152606080850135908201526080908101906101da9060a08601908601610566565b151581526020016101f160c0850160a08601610566565b1515815260200161020560c0850185610518565b8080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525050509082525060200161024c60e0850185610518565b8080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152505050908252506101008401356020820152610120909301356040909301929092525090565b6040516020016102ca9060208082526004908201526350504d5360e01b604082015260600190565b6040516020818303038152906040528051906020012081565b6040516020016102ca90602080825260059082015264494d41474560d81b604082015260600190565b6040516020016102ca906020808252600d908201526c465245454249455f494d41474560981b604082015260600190565b6040516020016102ca906020808252600e908201526d465245454249455f53545245414d60901b604082015260600190565b6040516020016102ca90602080825260059082015264564944454f60d81b604082015260600190565b6040516020016102ca906020808252600d908201526c465245454249455f564944454f60981b604082015260600190565b6000602082840312156103db57600080fd5b813567ffffffffffffffff8111156103f257600080fd5b8201610140818503121561040557600080fd5b9392505050565b6000815180845260005b8181101561043257602081850181015186830182015201610416565b81811115610444576000602083870101525b50601f01601f19169290920160200192915050565b602081526000825161014080602085015261047861016085018361040c565b915060208501516040850152604085015160608501526060850151608085015260808501516104ab60a086018215159052565b5060a085015180151560c08601525060c0850151601f19808685030160e08701526104d6848361040c565b935060e087015191506101008187860301818801526104f5858461040c565b908801516101208881019190915290970151929095019190915250929392505050565b6000808335601e1984360301811261052f57600080fd5b83018035915067ffffffffffffffff82111561054a57600080fd5b60200191503681900382131561055f57600080fd5b9250929050565b60006020828403121561057857600080fd5b8135801515811461040557600080fdfea264697066735822122020f6cb85fa7f928bbefe7f57aef88698609d6aa274cc392059b0fb57a1708e2864736f6c63430008090033",
+    "sourceMap": "58:1761:17:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;58:1761:17;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600436106100925760003560e01c80636748031c116100655780636748031c146100e657806381aebef8146100ee578063c840950e146100c0578063f7af1423146100f657600080fd5b8063098d8f811461009757806310169a2b146100c057806314e1ec4c146100d65780631a462ed9146100de575b600080fd5b6100aa6100a53660046103c9565b6100fe565b6040516100b79190610459565b60405180910390f35b6100c86102a2565b6040519081526020016100b7565b6100c86102e3565b6100c861030c565b6100c861033d565b6100c861036f565b6100c8610398565b61015860405180610140016040528060608152602001600081526020016000815260200160008152602001600015158152602001600015158152602001606081526020016060815260200160008152602001600081525090565b6040805161014081019091528061016f8480610518565b8080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152505050908252506020848101359082015260408085013590820152606080850135908201526080908101906101da9060a08601908601610566565b151581526020016101f160c0850160a08601610566565b1515815260200161020560c0850185610518565b8080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525050509082525060200161024c60e0850185610518565b8080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152505050908252506101008401356020820152610120909301356040909301929092525090565b6040516020016102ca9060208082526004908201526350504d5360e01b604082015260600190565b6040516020818303038152906040528051906020012081565b6040516020016102ca90602080825260059082015264494d41474560d81b604082015260600190565b6040516020016102ca906020808252600d908201526c465245454249455f494d41474560981b604082015260600190565b6040516020016102ca906020808252600e908201526d465245454249455f53545245414d60901b604082015260600190565b6040516020016102ca90602080825260059082015264564944454f60d81b604082015260600190565b6040516020016102ca906020808252600d908201526c465245454249455f564944454f60981b604082015260600190565b6000602082840312156103db57600080fd5b813567ffffffffffffffff8111156103f257600080fd5b8201610140818503121561040557600080fd5b9392505050565b6000815180845260005b8181101561043257602081850181015186830182015201610416565b81811115610444576000602083870101525b50601f01601f19169290920160200192915050565b602081526000825161014080602085015261047861016085018361040c565b915060208501516040850152604085015160608501526060850151608085015260808501516104ab60a086018215159052565b5060a085015180151560c08601525060c0850151601f19808685030160e08701526104d6848361040c565b935060e087015191506101008187860301818801526104f5858461040c565b908801516101208881019190915290970151929095019190915250929392505050565b6000808335601e1984360301811261052f57600080fd5b83018035915067ffffffffffffffff82111561054a57600080fd5b60200191503681900382131561055f57600080fd5b9250929050565b60006020828403121561057857600080fd5b8135801515811461040557600080fdfea264697066735822122020f6cb85fa7f928bbefe7f57aef88698609d6aa274cc392059b0fb57a1708e2864736f6c63430008090033",
+    "sourceMap": "58:1761:17:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1257:559;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;892:71;;;:::i;:::-;;;2543:25:103;;;2531:2;2516:18;892:71:17;2389:185:103;657:73:17;;;:::i;969:89::-;;;:::i;1159:91::-;;;:::i;736:73::-;;;:::i;1064:89::-;;;:::i;1257:559::-;1328:19;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1328:19:17;1366:443;;;;;;;;;;1403:15;:6;;:15;:::i;:::-;1366:443;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1366:443:17;;;-1:-1:-1;1366:443:17;1438:11;;;;1366:443;;;;;1473:15;;;;1366:443;;;;;1511:14;;;;1366:443;;;;;;;;;1564:30;;;;;;;;;:::i;:::-;1366:443;;;;;;1617:14;;;;;;;;:::i;:::-;1366:443;;;;;;1653:12;;;;:6;:12;:::i;:::-;1366:443;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1366:443:17;;;-1:-1:-1;1366:443:17;;1695:19;;;;:6;:19;:::i;:::-;1366:443;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1366:443:17;;;-1:-1:-1;1742:17:17;;;;1366:443;;;;1784:14;;;;;1366:443;;;;;;;;-1:-1:-1;1359:450:17;1257:559::o;892:71::-;944:18;;;;;;3586:2:103;3568:21;;;3625:1;3605:18;;;3598:29;-1:-1:-1;;;3658:2:103;3643:18;;3636:34;3702:2;3687:18;;3384:327;944:18:17;;;;;;;;;;;;;934:29;;;;;;892:71;:::o;657:73::-;710:19;;;;;;3918:2:103;3900:21;;;3957:1;3937:18;;;3930:29;-1:-1:-1;;;3990:2:103;3975:18;;3968:35;4035:2;4020:18;;3716:328;969:89:17;1030:27;;;;;;4251:2:103;4233:21;;;4290:2;4270:18;;;4263:30;-1:-1:-1;;;4324:2:103;4309:18;;4302:43;4377:2;4362:18;;4049:337;1159:91:17;1221:28;;;;;;4593:2:103;4575:21;;;4632:2;4612:18;;;4605:30;-1:-1:-1;;;4666:2:103;4651:18;;4644:44;4720:2;4705:18;;4391:338;736:73:17;789:19;;;;;;4936:2:103;4918:21;;;4975:1;4955:18;;;4948:29;-1:-1:-1;;;5008:2:103;4993:18;;4986:35;5053:2;5038:18;;4734:328;1064:89:17;1125:27;;;;;;5269:2:103;5251:21;;;5308:2;5288:18;;;5281:30;-1:-1:-1;;;5342:2:103;5327:18;;5320:43;5395:2;5380:18;;5067:337;14:392;105:6;158:2;146:9;137:7;133:23;129:32;126:52;;;174:1;171;164:12;126:52;214:9;201:23;247:18;239:6;236:30;233:50;;;279:1;276;269:12;233:50;302:22;;358:3;340:16;;;336:26;333:46;;;375:1;372;365:12;333:46;398:2;14:392;-1:-1:-1;;;14:392:103:o;411:472::-;453:3;491:5;485:12;518:6;513:3;506:19;543:1;553:162;567:6;564:1;561:13;553:162;;;629:4;685:13;;;681:22;;675:29;657:11;;;653:20;;646:59;582:12;553:162;;;733:6;730:1;727:13;724:87;;;799:1;792:4;783:6;778:3;774:16;770:27;763:38;724:87;-1:-1:-1;865:2:103;844:15;-1:-1:-1;;840:29:103;831:39;;;;872:4;827:50;;411:472;-1:-1:-1;;411:472:103:o;984:1400::-;1181:2;1170:9;1163:21;1144:4;1219:6;1213:13;1245:6;1287:2;1282;1271:9;1267:18;1260:30;1313:52;1360:3;1349:9;1345:19;1331:12;1313:52;:::i;:::-;1299:66;;1419:2;1411:6;1407:15;1401:22;1396:2;1385:9;1381:18;1374:50;1478:2;1470:6;1466:15;1460:22;1455:2;1444:9;1440:18;1433:50;1538:2;1530:6;1526:15;1520:22;1514:3;1503:9;1499:19;1492:51;1592:3;1584:6;1580:16;1574:23;1606:52;1653:3;1642:9;1638:19;1622:14;958:13;951:21;939:34;;888:91;1606:52;-1:-1:-1;1707:3:103;1695:16;;1689:23;958:13;;951:21;1768:3;1753:19;;939:34;1721:52;1822:3;1814:6;1810:16;1804:23;1850:2;1846:7;1918:2;1906:9;1898:6;1894:22;1890:31;1884:3;1873:9;1869:19;1862:60;1945:41;1979:6;1963:14;1945:41;:::i;:::-;1931:55;;2035:3;2027:6;2023:16;2017:23;1995:45;;2059:3;2126:2;2114:9;2106:6;2102:22;2098:31;2093:2;2082:9;2078:18;2071:59;2153:41;2187:6;2171:14;2153:41;:::i;:::-;2219:15;;;2213:22;2254:3;2273:18;;;2266:30;;;;2338:15;;;2332:22;2312:18;;;;2305:50;;;;-1:-1:-1;2139:55:103;;984:1400;-1:-1:-1;;;984:1400:103:o;2579:522::-;2657:4;2663:6;2723:11;2710:25;2817:2;2813:7;2802:8;2786:14;2782:29;2778:43;2758:18;2754:68;2744:96;;2836:1;2833;2826:12;2744:96;2863:33;;2915:20;;;-1:-1:-1;2958:18:103;2947:30;;2944:50;;;2990:1;2987;2980:12;2944:50;3023:4;3011:17;;-1:-1:-1;3054:14:103;3050:27;;;3040:38;;3037:58;;;3091:1;3088;3081:12;3037:58;2579:522;;;;;:::o;3106:273::-;3162:6;3215:2;3203:9;3194:7;3190:23;3186:32;3183:52;;;3231:1;3228;3221:12;3183:52;3270:9;3257:23;3323:5;3316:13;3309:21;3302:5;3299:32;3289:60;;3345:1;3342;3335:12",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "/Users/nicolascloutier/Documents/GitHub/akapz-dao/chain/contracts/Libraries/Media.sol",
+    "id": 1981,
+    "exportedSymbols": {
+      "Media": [
+        1980
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1787:17",
+    "nodes": [
+      {
+        "id": 1846,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:17",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 1980,
+        "nodeType": "ContractDefinition",
+        "src": "58:1761:17",
+        "nodes": [
+          {
+            "id": 1867,
+            "nodeType": "StructDefinition",
+            "src": "76:274:17",
+            "canonicalName": "Media.ImageDetails",
+            "members": [
+              {
+                "constant": false,
+                "id": 1848,
+                "mutability": "mutable",
+                "name": "mimeType",
+                "nameLocation": "113:8:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "106:15:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1847,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "106:6:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1850,
+                "mutability": "mutable",
+                "name": "size",
+                "nameLocation": "136:4:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "131:9:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1849,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "131:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1852,
+                "mutability": "mutable",
+                "name": "heightPx",
+                "nameLocation": "155:8:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "150:13:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1851,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "150:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1854,
+                "mutability": "mutable",
+                "name": "widthPx",
+                "nameLocation": "178:7:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "173:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1853,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "173:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1856,
+                "mutability": "mutable",
+                "name": "_censoredIfNotPurchased",
+                "nameLocation": "200:23:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "195:28:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1855,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1858,
+                "mutability": "mutable",
+                "name": "_isNSFW",
+                "nameLocation": "238:7:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "233:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1857,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "233:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1860,
+                "mutability": "mutable",
+                "name": "title",
+                "nameLocation": "262:5:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "255:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1859,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "255:6:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1862,
+                "mutability": "mutable",
+                "name": "_description",
+                "nameLocation": "284:12:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "277:19:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1861,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:6:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1864,
+                "mutability": "mutable",
+                "name": "_timestamp",
+                "nameLocation": "311:10:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "306:15:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1863,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "306:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1866,
+                "mutability": "mutable",
+                "name": "_expiry",
+                "nameLocation": "336:7:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "331:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1865,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "331:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ImageDetails",
+            "nameLocation": "83:12:17",
+            "scope": 1980,
+            "visibility": "public"
+          },
+          {
+            "id": 1890,
+            "nodeType": "StructDefinition",
+            "src": "357:294:17",
+            "canonicalName": "Media.VideoDetails",
+            "members": [
+              {
+                "constant": false,
+                "id": 1869,
+                "mutability": "mutable",
+                "name": "mimeType",
+                "nameLocation": "394:8:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "387:15:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1868,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "387:6:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1871,
+                "mutability": "mutable",
+                "name": "size",
+                "nameLocation": "417:4:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "412:9:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1870,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "412:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1873,
+                "mutability": "mutable",
+                "name": "heightPx",
+                "nameLocation": "436:8:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "431:13:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1872,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "431:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1875,
+                "mutability": "mutable",
+                "name": "widthPx",
+                "nameLocation": "459:7:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "454:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1874,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "454:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1877,
+                "mutability": "mutable",
+                "name": "_hasPreview",
+                "nameLocation": "481:11:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "476:16:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1876,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "476:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1879,
+                "mutability": "mutable",
+                "name": "_isNSFW",
+                "nameLocation": "507:7:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "502:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1878,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "502:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1881,
+                "mutability": "mutable",
+                "name": "title",
+                "nameLocation": "531:5:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "524:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1880,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "524:6:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1883,
+                "mutability": "mutable",
+                "name": "_description",
+                "nameLocation": "553:12:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "546:19:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1882,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "546:6:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1885,
+                "mutability": "mutable",
+                "name": "durationInSeconds",
+                "nameLocation": "580:17:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "575:22:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1884,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "575:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1887,
+                "mutability": "mutable",
+                "name": "_timestamp",
+                "nameLocation": "612:10:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "607:15:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1886,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "607:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1889,
+                "mutability": "mutable",
+                "name": "_expiry",
+                "nameLocation": "637:7:17",
+                "nodeType": "VariableDeclaration",
+                "scope": 1890,
+                "src": "632:12:17",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1888,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "632:4:17",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "VideoDetails",
+            "nameLocation": "364:12:17",
+            "scope": 1980,
+            "visibility": "public"
+          },
+          {
+            "id": 1898,
+            "nodeType": "VariableDeclaration",
+            "src": "657:73:17",
+            "constant": true,
+            "functionSelector": "14e1ec4c",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_IMAGE",
+            "nameLocation": "681:16:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1891,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "657:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "494d414745",
+                      "id": 1895,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "721:7:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_eb937fee73a62c9882bd1bab03047f96049ff0727c394d57c2db6f4c2d072630",
+                        "typeString": "literal_string \"IMAGE\""
+                      },
+                      "value": "IMAGE"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_eb937fee73a62c9882bd1bab03047f96049ff0727c394d57c2db6f4c2d072630",
+                        "typeString": "literal_string \"IMAGE\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1893,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "710:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1894,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "710:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1896,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "710:19:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1892,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "700:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1897,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "700:30:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1906,
+            "nodeType": "VariableDeclaration",
+            "src": "736:73:17",
+            "constant": true,
+            "functionSelector": "81aebef8",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_VIDEO",
+            "nameLocation": "760:16:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1899,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "736:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "564944454f",
+                      "id": 1903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "800:7:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_09f2593826cce00432586f370860bb86679338f187bcadac4bafa60d83bf847e",
+                        "typeString": "literal_string \"VIDEO\""
+                      },
+                      "value": "VIDEO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_09f2593826cce00432586f370860bb86679338f187bcadac4bafa60d83bf847e",
+                        "typeString": "literal_string \"VIDEO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1901,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "789:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "789:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1904,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "789:19:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1900,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "779:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1905,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "779:30:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1914,
+            "nodeType": "VariableDeclaration",
+            "src": "815:71:17",
+            "constant": true,
+            "functionSelector": "c840950e",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_PPMS",
+            "nameLocation": "839:15:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1907,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "815:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "50504d53",
+                      "id": 1911,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "878:6:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_bd3688ae6206c1bf20868f50ddf6012005da98f04a3ca933e61cd712fc8b6e10",
+                        "typeString": "literal_string \"PPMS\""
+                      },
+                      "value": "PPMS"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_bd3688ae6206c1bf20868f50ddf6012005da98f04a3ca933e61cd712fc8b6e10",
+                        "typeString": "literal_string \"PPMS\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1909,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "867:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1910,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "867:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1912,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "867:18:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1908,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "857:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1913,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "857:29:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1922,
+            "nodeType": "VariableDeclaration",
+            "src": "892:71:17",
+            "constant": true,
+            "functionSelector": "10169a2b",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_PPVS",
+            "nameLocation": "916:15:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1915,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "892:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "50504d53",
+                      "id": 1919,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "955:6:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_bd3688ae6206c1bf20868f50ddf6012005da98f04a3ca933e61cd712fc8b6e10",
+                        "typeString": "literal_string \"PPMS\""
+                      },
+                      "value": "PPMS"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_bd3688ae6206c1bf20868f50ddf6012005da98f04a3ca933e61cd712fc8b6e10",
+                        "typeString": "literal_string \"PPMS\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1917,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "944:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "944:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1920,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "944:18:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1916,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "934:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1921,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "934:29:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1930,
+            "nodeType": "VariableDeclaration",
+            "src": "969:89:17",
+            "constant": true,
+            "functionSelector": "1a462ed9",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_FREEBIE_IMAGE",
+            "nameLocation": "993:24:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1923,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "969:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "465245454249455f494d414745",
+                      "id": 1927,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1041:15:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_6155e57ef8dae58bbb730e1446666c2f4b15361d9e156fd1727bb999b81167de",
+                        "typeString": "literal_string \"FREEBIE_IMAGE\""
+                      },
+                      "value": "FREEBIE_IMAGE"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_6155e57ef8dae58bbb730e1446666c2f4b15361d9e156fd1727bb999b81167de",
+                        "typeString": "literal_string \"FREEBIE_IMAGE\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1925,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "1030:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1926,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "1030:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1928,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "1030:27:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1924,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "1020:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1929,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1020:38:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1938,
+            "nodeType": "VariableDeclaration",
+            "src": "1064:89:17",
+            "constant": true,
+            "functionSelector": "f7af1423",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_FREEBIE_VIDEO",
+            "nameLocation": "1088:24:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1931,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1064:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "465245454249455f564944454f",
+                      "id": 1935,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1136:15:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_fa10084eb98145628a625fa00583e95e8725b5007ff73f2a8b2ef5acd9585122",
+                        "typeString": "literal_string \"FREEBIE_VIDEO\""
+                      },
+                      "value": "FREEBIE_VIDEO"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_fa10084eb98145628a625fa00583e95e8725b5007ff73f2a8b2ef5acd9585122",
+                        "typeString": "literal_string \"FREEBIE_VIDEO\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1933,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "1125:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1934,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "1125:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1936,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "1125:27:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1932,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "1115:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1937,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1115:38:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1946,
+            "nodeType": "VariableDeclaration",
+            "src": "1159:91:17",
+            "constant": true,
+            "functionSelector": "6748031c",
+            "mutability": "constant",
+            "name": "MEDIA_TYPE_FREEBIE_STREAM",
+            "nameLocation": "1183:25:17",
+            "scope": 1980,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 1939,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1159:7:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "465245454249455f53545245414d",
+                      "id": 1943,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1232:16:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_ae45c4cf675e3442aa9c70ffaf25d607068acb17a128d14f9f796bdc9395b349",
+                        "typeString": "literal_string \"FREEBIE_STREAM\""
+                      },
+                      "value": "FREEBIE_STREAM"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_ae45c4cf675e3442aa9c70ffaf25d607068acb17a128d14f9f796bdc9395b349",
+                        "typeString": "literal_string \"FREEBIE_STREAM\""
+                      }
+                    ],
+                    "expression": {
+                      "id": 1941,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -1,
+                      "src": "1221:3:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 1942,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encode",
+                    "nodeType": "MemberAccess",
+                    "src": "1221:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 1944,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "1221:28:17",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 1940,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "1211:9:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 1945,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1211:39:17",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 1979,
+            "nodeType": "FunctionDefinition",
+            "src": "1257:559:17",
+            "body": {
+              "id": 1978,
+              "nodeType": "Block",
+              "src": "1349:467:17",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 1956,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1403:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1957,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "mimeType",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1848,
+                        "src": "1403:15:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1958,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1438:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1959,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "size",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1850,
+                        "src": "1438:11:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1960,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1473:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1961,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "heightPx",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1852,
+                        "src": "1473:15:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1962,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1511:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1963,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "widthPx",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1854,
+                        "src": "1511:14:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1964,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1564:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1965,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "_censoredIfNotPurchased",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1856,
+                        "src": "1564:30:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1966,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1617:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1967,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "_isNSFW",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1858,
+                        "src": "1617:14:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1968,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1653:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1969,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "title",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1860,
+                        "src": "1653:12:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1970,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1695:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1971,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "_description",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1862,
+                        "src": "1695:19:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1972,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1742:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1973,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "_timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1864,
+                        "src": "1742:17:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 1974,
+                          "name": "_image",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1949,
+                          "src": "1784:6:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                            "typeString": "struct Media.ImageDetails calldata"
+                          }
+                        },
+                        "id": 1975,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "_expiry",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1866,
+                        "src": "1784:14:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 1955,
+                      "name": "ImageDetails",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1867,
+                      "src": "1366:12:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_ImageDetails_$1867_storage_ptr_$",
+                        "typeString": "type(struct Media.ImageDetails storage pointer)"
+                      }
+                    },
+                    "id": 1976,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "mimeType",
+                      "size",
+                      "heightPx",
+                      "widthPx",
+                      "_censoredIfNotPurchased",
+                      "_isNSFW",
+                      "title",
+                      "_description",
+                      "_timestamp",
+                      "_expiry"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "1366:443:17",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ImageDetails_$1867_memory_ptr",
+                      "typeString": "struct Media.ImageDetails memory"
+                    }
+                  },
+                  "functionReturnParameters": 1954,
+                  "id": 1977,
+                  "nodeType": "Return",
+                  "src": "1359:450:17"
+                }
+              ]
+            },
+            "functionSelector": "098d8f81",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newImage",
+            "nameLocation": "1266:8:17",
+            "parameters": {
+              "id": 1950,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1949,
+                  "mutability": "mutable",
+                  "name": "_image",
+                  "nameLocation": "1297:6:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1979,
+                  "src": "1275:28:17",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ImageDetails_$1867_calldata_ptr",
+                    "typeString": "struct Media.ImageDetails"
+                  },
+                  "typeName": {
+                    "id": 1948,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1947,
+                      "name": "ImageDetails",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1867,
+                      "src": "1275:12:17"
+                    },
+                    "referencedDeclaration": 1867,
+                    "src": "1275:12:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ImageDetails_$1867_storage_ptr",
+                      "typeString": "struct Media.ImageDetails"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:30:17"
+            },
+            "returnParameters": {
+              "id": 1954,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1953,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1979,
+                  "src": "1328:19:17",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ImageDetails_$1867_memory_ptr",
+                    "typeString": "struct Media.ImageDetails"
+                  },
+                  "typeName": {
+                    "id": 1952,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1951,
+                      "name": "ImageDetails",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1867,
+                      "src": "1328:12:17"
+                    },
+                    "referencedDeclaration": 1867,
+                    "src": "1328:12:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ImageDetails_$1867_storage_ptr",
+                      "typeString": "struct Media.ImageDetails"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1327:21:17"
+            },
+            "scope": 1980,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Media",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1980
+        ],
+        "name": "Media",
+        "nameLocation": "66:5:17",
+        "scope": 1981,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  }
+}

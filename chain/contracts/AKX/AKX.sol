@@ -9,15 +9,14 @@ import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 import "@openzeppelin/contracts/utils/Context.sol";
 
 contract AKX is Context, AccessControlEnumerable, ERC20Burnable, ERC20Pausable, ERC20Permit {
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 
-    string public name = "Akapz Network Token";
-    string public symbol = "AKX";
-    uint8 public decimals = 18;
     string public constant version = "1";
-    mapping(address => uint) public nonces;
+
+    constructor(string memory _name_, string memory _symbol_) ERC20(_name_, _symbol_) ERC20Permit(_name_)  {
 
 
-    constructor(uint256 _chainId) ERC20(name, symbol) ERC20Permit(name, version)  {
 
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
 
