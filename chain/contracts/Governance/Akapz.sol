@@ -10,7 +10,7 @@ import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
 //import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
 import "./Fees.sol";
-import "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/interfaces/IUniswapV2Router02.sol";
+
 import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
 
 contract Akapz is Initializable, UUPSUpgradeable, AccessControlEnumerableUpgradeable, ERC20VotesUpgradeable, Fees {
@@ -54,7 +54,7 @@ function initialize(string memory name, string memory symbol, address owner_) pu
     function swapEthForExactTokens(address _tokenAddr) public override(IUniswapV2Router02) {
         address[] memory path = new address[](2);
         path[0] = address(_tokenAddr);
-        path[1] = UniswapV2Router02.WETH();
+        path[1] = uniswapRouter.WETH();
     }
 
     function convertEthToDai(uint daiAmount) public payable {
@@ -73,7 +73,7 @@ function initialize(string memory name, string memory symbol, address owner_) pu
     function getPathForETHtoDAI() private view returns (address[] memory) {
         address[] memory path = new address[](2);
         path[0] = uniswapRouter.WETH();
-        path[1] = multiDaiKovan;
+        path[1] = address(this);
 
         return path;
     }

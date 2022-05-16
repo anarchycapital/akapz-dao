@@ -3,7 +3,7 @@ pragma solidity 0.8.9;
 
 import { IERC20 as ERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { Akapz as IAkapz} from "../Governance/Akapz.sol";
-import "../Governance/Governor.sol";
+
 
 interface IAkapzPublicProxy {
 
